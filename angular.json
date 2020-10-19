@@ -21,12 +21,15 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              
             ],
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -90,7 +93,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              
+            ]
           }
         },
         "lint": {
