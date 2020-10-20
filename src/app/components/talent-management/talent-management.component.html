@@ -14,12 +14,10 @@
         </div>
         <div class="col-md-6">
             <div class="thumbnail-seccion-container__data">
-                <h2>Gestión de Talento</h2>
+                <h2>{{avenida.title}}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 <div class="thumbnail-seccion-container__action-buttons">
-                    <button>Atracción, retención y Desarrollo de Talento</button>
-                    <button>Identificación y Gestión de Talento</button>
-                    <button>Plan de Reconocimiento</button>
+                <button *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
                 </div>
             </div>
         </div>

@@ -18,12 +18,10 @@
         </div>
         <div class="col-md-6">
             <div class="thumbnail-seccion-container__data">
-                <h2>Estrategia Digital</h2>
+                <h2>{{avenida.title}}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 <div class="thumbnail-seccion-container__action-buttons">
-                    <button>Ecosistema de Colaboración Digital</button>
-                    <button>Automatización de Procesos de Negocio</button>
-                    <button>Digitalización de Experiencias de Cliente</button>
+                <button *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
                 </div>
             </div>
         </div>
