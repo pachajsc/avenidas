@@ -9,24 +9,13 @@ import { DOCUMENT } from '@angular/common';
 export class HomeComponent implements OnInit {
 
   
-  constructor(@Inject(DOCUMENT) document) { }
+  constructor() { }
 
   ngOnInit() {
     
   }
 
   
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e) {
-    alert('test')
-     if (window.pageYOffset > 550) {
-       
-       let element = document.getElementById('navbar');
-       element.classList.add('sticky');
-     } else {
-      let element = document.getElementById('navbar');
-        element.classList.remove('sticky'); 
-     }
-  }
+ 
   
 }
