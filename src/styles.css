@@ -2,8 +2,7 @@
 @import "assets/css/normalize.css";
 @import "assets/css/bootstrap-grid.css";
 @import "assets/css/fonts.css";
-
-
+@import "assets/css/animate.css";
 
 .wrapper-content{
     max-width:1136px;
@@ -15,9 +14,12 @@
     cursor:pointer;
     position:fixed;
     right:115px;
+    bottom:-50px;
+    transition: .3s;
+}
+.arrow-active{
     bottom:17px;
 }
-
 /*section component*/
 .thumbnail-seccion-container button{
     width: 269px;

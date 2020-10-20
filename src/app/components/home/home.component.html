@@ -1,11 +1,11 @@
-
 <div>
 <app-nav></app-nav>
 <app-hero></app-hero>
 <!--list items section-->
-<section class="seccion-container listItems-section" id="avenidas">
+<div id="avenidas"></div>
+<section class="seccion-container listItems-section" >
     <div class="wrapper-content"> 
-        <h1>Nuestras Avenidas</h1>
+        <h1 class="animate__animated">Nuestras Avenidas</h1>
         <p>El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.</p>
         <img src="assets/image/title-image.svg" alt="" class="title-image"> 
         <div class="row" >
@@ -60,10 +60,10 @@
 <app-new-itmodel [avenida]="itemsAvenidas.item6"></app-new-itmodel>
 </section>
 <!--section new-itmodel-->
-</div>
 
 
-<div class="icon-button-top"><img src="../../assets/image/back-to-top.png" alt="arrow top"></div>
+
+<a href="#top" class="icon-button-top scroll-smooth" id="arrow"><img src="../../assets/image/back-to-top.png" alt="arrow top"></a>
 
 
 
