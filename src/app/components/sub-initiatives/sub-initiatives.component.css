@@ -2,6 +2,7 @@
 .thumbnail-container{
     margin-top:56px;
     min-height:500px;
+   
 }
 .thumbnail-container__card{
     background: #FFFFFF;
@@ -9,6 +10,7 @@
     margin-bottom:30px;
     min-height:322px;
     transition: .5s;
+    cursor:pointer;
 }
 .thumbnail-container__card:hover{
     box-shadow: 0 0 42px 5px #0000001a;

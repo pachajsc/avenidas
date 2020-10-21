@@ -64,8 +64,8 @@
     background-color: #FFFFFF;
 }
 .thumbnail-seccion-container{
-    min-height:650px;
-    padding:195px 0 125px 0;
+    padding:180px 0 200px 0;
+    margin:40px 0 10px 0;
 }
 .thumbnail-seccion-container img{
     position:absolute;
@@ -104,3 +104,9 @@
     margin:5px 0 22px 0;
 }
 /*section component*/
+
+
+/*ejemplo*/
+.av-ini, .av-ini-detail{
+    display:none;
+}

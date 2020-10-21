@@ -55,6 +55,18 @@
     color:#FF8F17;
     font-weight:400;
 }
+
+.nav-content ul li a.active .arrow{
+    border: solid #FF8F17;
+    border-width: 0 2px 2px 0;
+}
+.nav-content ul li a.active{
+    color:#FF8F17;
+    font-weight:400;
+}
+
+
+
 .nav-content ul li.logo-item{
     max-width: 211px;
 }

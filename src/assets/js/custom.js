@@ -1,6 +1,36 @@
+// //example nav
+// $(document).ready(function() {
+//   $('.btn-ini').click(function(){
+//     $('.pg').fadeOut()
+//     $('.av-ini').delay( 800 ).fadeIn(3000);
+//    })
+// });
 
 
+
+//scroll smooth
+function onInit(){
+  const links = document.querySelectorAll(".scroll-smooth");
+
+  for (const link of links) {
+    link.addEventListener("click", clickHandler);
+  }
+
+  function clickHandler(e) {
+    e.preventDefault();
+    const href = this.getAttribute("href");
+
+    document.querySelector(href).scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+}
+//scroll smooth
+
+
+//scroll position conditional
 window.addEventListener("scroll",function(e) {
+
    let header = document.getElementById("myHeader");
    let arrow = document.getElementById("arrow");
    let scrollPosition =
@@ -13,33 +43,46 @@ window.addEventListener("scroll",function(e) {
      header.classList.add("sticky");
    } else {
      header.classList.remove("sticky");
+     
    }
    if (scrollPosition > 200) {
     arrow.classList.add("arrow-active");
   } else {
     arrow.classList.remove("arrow-active");
   }
+  if (scrollPosition < 1200) {
+    btns.classList.remove("menuActive");
+  }
 
-// Detect request animation frame
+  if (scrollPosition < 1300) {$('.scroll-smooth').removeClass('active')}
+//scroll position conditional
+
+
+// Animate section
 var scroll = window.requestAnimationFrame ||
-             // IE Fallback
-             function(callback){ window.setTimeout(callback, 1000/60)};
-var elementsToShow = document.querySelectorAll('.animate__animated'); 
-
-function loop() {
-
-    Array.prototype.forEach.call(elementsToShow, function(element){
-      if (isElementInViewport(element)) {
-        element.classList.add('animate__fadeInUp');
+  function(callback){ window.setTimeout(callback, 1000/60)};
+  var elementsToShow = document.querySelectorAll('.animate__animated'); 
+  var menuItemsToShow = document.querySelectorAll('.thumbnail-seccion-container'); 
+ 
+  function loop() {
+     Array.prototype.forEach.call(elementsToShow, function(element){
+       if (isElementInViewport(element)) {
+         element.classList.add('animate__');
+       } else {
+         element.classList.remove('animate__');
+       }
+     });
+     Array.prototype.forEach.call(menuItemsToShow, function(pp){
+      if (isElementInViewport(pp)) {
+        pp.classList.add('active');
       } else {
-        element.classList.remove('animate__fadeInUp');
+        pp.classList.remove('active');
       }
     });
+    
 
     scroll(loop);
 }
-
-// Call the loop for the first time
 loop();
 
 function isElementInViewport(el) {
@@ -59,24 +102,46 @@ function isElementInViewport(el) {
       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
   );
 }
+// Animate section
+var scrollDistance = $(window).scrollTop();
+ console.log('distancia', scrollDistance)
+  // Show/hide menu on scroll
+  //if (scrollDistance >= 850) {
+  //		$('nav').fadeIn("fast");
+  //} else {
+  //		$('nav').fadeOut("fast");
+  //}
 
-
-const links = document.querySelectorAll(".scroll-smooth");
-
-for (const link of links) {
-  link.addEventListener("click", clickHandler);
-}
-
-function clickHandler(e) {
-  e.preventDefault();
-  const href = this.getAttribute("href");
-
-  document.querySelector(href).scrollIntoView({
-    behavior: "smooth"
+  // Assign active class to nav links while scolling
+  $('.thumbnail-seccion-container').each(function(i) {
+      if ($(this).position().top <= scrollDistance) {
+          $('.nav-content a.lk.active').removeClass('active');
+          $('.nav-content a.lk').eq(i).addClass('active');
+      }
   });
-}
-
-
 
 }, true)
+
+
+
+$(document).ready(function() {
+  $('a[href*=#]').bind('click', function(e) {
+      e.preventDefault(); // prevent hard jump, the default behavior
+
+      var target = $(this).attr("href"); // Set the target as variable
+
+      // perform animated scrolling by getting top-position of target-element and set it as scroll target
+      $('html, body').stop().animate({
+          scrollTop: $(target).offset().top
+      }, 600, function() {
+          location.hash = target; //attach the hash (#jumptarget) to the pageurl
+      });
+
+      return false;
+  });
+  
+});
+
+
+
 
