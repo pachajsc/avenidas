@@ -1,15 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { IAvenidas } from 'src/app/interfaces/avenidas';
 
 @Component({
   selector: 'app-new-itmodel',
   templateUrl: './new-itmodel.component.html',
-  styleUrls: ['./new-itmodel.component.css']
+  styleUrls: ['./new-itmodel.component.css'],
 })
 export class NewITModelComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  constructor() {}
+  @Input() avenida: IAvenidas;
+  ngOnInit(): void {}
 }

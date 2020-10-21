@@ -4,12 +4,10 @@
     <div class="row">
         <div class="col-md-6">
             <div class="thumbnail-seccion-container__data ">
-                <h2 class="animate__animated">Estrategia Tecnológica</h2>
+                <h2 class="animate__animated">{{avenida.title}}</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
                 <div class="thumbnail-seccion-container__action-buttons">
-                    <button>Mapa de Obsolescencia</button>
-                    <button>Migración a Cloud</button>
-                    <button>Racionalización de Aplicaciones</button>
+                    <button *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
                 </div>
             </div>
         </div>

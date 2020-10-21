@@ -1,3 +1,4 @@
+<div>
 <app-nav></app-nav>
 <app-hero></app-hero>
 <!--list items section-->
@@ -7,70 +8,14 @@
         <h1 class="animate__animated">Nuestras Avenidas</h1>
         <p>El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.</p>
         <img src="assets/image/title-image.svg" alt="" class="title-image"> 
-        <div class="row">
-            <div class="col-sm-2">
+        <div class="row" >
+            <div class="col-sm-2" *ngFor="let item of avenidas">
                 <div class="listItems-section__title-items">
-                    <img src="assets/image/icono-avenidas-1.png" alt="" class="circle-icon-1">
-                    <h2>Customer<br> Centricity</h2>
+                    <img src={{item.src}} alt="" class={{item.class}}>
+                    <h2>{{item.title}}</h2>
                 </div> 
-                <ul>
-                    <li>Visión 360</li>
-                    <li>Interacción Directa y Personalización</li>
-                </ul>   
-            </div>
-            <div class="col-sm-2">
-                <div class="listItems-section__title-items">
-                    <img src="assets/image/icono-avenidas-2.png" alt="" class="circle-icon-2">
-                    <h2>Cyberseguridad y<br> Compliance</h2>
-                </div> 
-                <ul>
-                    <li>Compliance Regulatorio</li>
-                    <li>Prevención de Cyberamenzas</li>
-                </ul>   
-            </div>
-            <div class="col-sm-2">
-                <div class="listItems-section__title-items item-3">
-                    <img src="assets/image/icono-avenidas-3.png" alt="" class="circle-icon-3">
-                    <h2>Estrategia<br> Digital</h2>
-                </div> 
-                <ul>
-                    <li>Ecosistema de Colaboración Digital</li>
-                    <li>Automatización de Procesos de Negocio</li>
-                    <li>Digitalización de Experiencias de Cliente</li>
-                    
-                </ul>   
-            </div>
-            <div class="col-sm-2">
-                <div class="listItems-section__title-items">
-                    <img src="assets/image/icono-avenidas-4.png" alt="" class="circle-icon-4">
-                    <h2>Estrategia<br> Tecnológica</h2>
-                </div> 
-                <ul>
-                    <li>Mapa de Obsolescencia</li>
-                    <li>Migración a Cloud</li>
-                    <li>Racionalización de Aplicaciones</li>
-                </ul>   
-            </div>
-            <div class="col-sm-2">
-                <div class="listItems-section__title-items">
-                    <img src="assets/image/icono-avenidas-5.png" alt="" class="circle-icon-5">
-                    <h2>Gestión de<br> Talento</h2>
-                </div> 
-                <ul>
-                    <li>Atracción, retención y Desarrollo de Talento</li>
-                    <li>Identificación y Gestión de Talento</li>
-                    <li>Plan de Reconocimiento</li>
-                </ul>   
-            </div>
-            <div class="col-sm-2">
-                <div class="listItems-section__title-items">
-                    <img src="assets/image/icono-avenidas-6.png" alt="" class="circle-icon-6">
-                    <h2>Nuevo<br> Modelo TI</h2>
-                </div> 
-                <ul>
-                    <li>Gestión del OPEX</li>
-                    <li>Gestión de PROYECTOS CAPEX</li>
-                    <li>Gobierno TI</li>
+                <ul *ngFor="let subItem of item.iniciativas">
+                    <li>{{subItem.title}}</li>
                 </ul>   
             </div>
         </div>
@@ -79,48 +24,40 @@
 <!--list items section-->
 
 <!--section customer-centricity-->
-<section class="thumbnail-seccion-container  color-orange " id="Customer-Centricity">
- <div class="av-page pg">  
-    <app-customer-centricity></app-customer-centricity>
-</div> 
-<div class="av-ini pg">  
-    <app-sub-initiatives></app-sub-initiatives>
-</div>
-<div class="av-ini-detail pg">  
-    <app-sub-initiatives-detail></app-sub-initiatives-detail>
-</div>
+<section class="thumbnail-seccion-container color-orange">
+<app-customer-centricity [avenida]="itemsAvenidas.item1"></app-customer-centricity>
 <!-- <app-sub-initiatives-detail></app-sub-initiatives-detail> -->
 <!-- <app-sub-initiatives></app-sub-initiatives> -->
 </section>
 <!--section customer-centricity-->
 
 <!--section cybersecurity-compliance-->
-<section class="thumbnail-seccion-container " id="Cyberseguridad-y-Compliance">
-<app-cybersecurity-compliance></app-cybersecurity-compliance>
+<section class="thumbnail-seccion-container">
+<app-cybersecurity-compliance [avenida]="itemsAvenidas.item2"></app-cybersecurity-compliance>
 </section>
 <!--section cybersecurity-compliance-->
 
 <!--section digital-strategy-->
-<section class="thumbnail-seccion-container  color-blue" id="Estrategia-Digital">
-<app-digital-strategy></app-digital-strategy>
+<section class="thumbnail-seccion-container color-blue">
+<app-digital-strategy [avenida]="itemsAvenidas.item3"></app-digital-strategy>
 </section>
 <!--section digital-strategy-->
 
 <!--section technological-strategy-->
-<section class="thumbnail-seccion-container  color-blue bkg-white" id="Estrategia-Tecnologica">
-<app-technological-strategy></app-technological-strategy>
+<section class="thumbnail-seccion-container color-blue bkg-white">
+<app-technological-strategy [avenida]="itemsAvenidas.item4"></app-technological-strategy>
 </section>
 <!--section technological-strategy-->
 
 <!--section talent-management-->
-<section class="thumbnail-seccion-container  color-orange" id="Gestion-de-Talento">
-<app-talent-management></app-talent-management>
+<section class="thumbnail-seccion-container color-orange">
+<app-talent-management [avenida]="itemsAvenidas.item5"></app-talent-management>
 </section>
 <!--section talent-management-->
 
 <!--section new-itmodel-->
-<section class="thumbnail-seccion-container " id="Nuevo-Modelo-TI">
-<app-new-itmodel></app-new-itmodel>
+<section class="thumbnail-seccion-container">
+<app-new-itmodel [avenida]="itemsAvenidas.item6"></app-new-itmodel>
 </section>
 <!--section new-itmodel-->
 
