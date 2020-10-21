@@ -40,14 +40,16 @@
 .listItems-section__title-items.item-3{
     min-height: 123px;
 }
-
+.listItems-section__title-items.item-3 h2{
+    margin-bottom: 12px;
+}
 .listItems-section__title-items img{
     position: relative;
     display: block;
     margin:0 auto;
 }
 .listItems-section__title-items img.circle-icon-3{
-    margin:7px auto 0px auto;
+    margin:0 auto 0px auto;
 }
 .listItems-section__title-items h2{
     font-style: normal;

@@ -11,8 +11,10 @@
         <div class="row" >
             <div class="col-sm-2" *ngFor="let item of avenidas">
                 <div class="listItems-section__title-items">
-                    <img src={{item.src}} alt="" class={{item.class}}>
-                    <h2>{{item.title}}</h2>
+                    <a href="#Customer-Centricity" class="scroll-smooth">
+                        <img src={{item.src}} alt="" class={{item.class}}>
+                        <h2>{{item.title}}</h2>
+                    </a>
                 </div> 
                 <ul *ngFor="let subItem of item.iniciativas">
                     <li>{{subItem.title}}</li>
