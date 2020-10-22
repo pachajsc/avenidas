@@ -17,6 +17,7 @@ import { DigitalStrategyComponent } from './components/digital-strategy/digital-
 import { TechnologicalStrategyComponent } from './components/technological-strategy/technological-strategy.component';
 import { TalentManagementComponent } from './components/talent-management/talent-management.component';
 import { NewITModelComponent } from './components/new-itmodel/new-itmodel.component';
+import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { NewITModelComponent } from './components/new-itmodel/new-itmodel.compon
     DigitalStrategyComponent,
     TechnologicalStrategyComponent,
     TalentManagementComponent,
-    NewITModelComponent
+    NewITModelComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

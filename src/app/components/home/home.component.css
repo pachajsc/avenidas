@@ -59,6 +59,8 @@
     text-align: center;
     color: #0089FF;
     letter-spacing: 0.5px;
+    width: 108px;
+    margin: auto;
 }
 .listItems-section ul{
     list-style-type: circle;
