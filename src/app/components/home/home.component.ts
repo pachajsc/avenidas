@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { MockAvenidasService } from '../../services/mock-avenidas.service';
 import { IAvenidas } from '../../interfaces/avenidas';
-=======
-import { Component, OnInit, HostListener, Inject } from '@angular/core'
-
->>>>>>> pepebranch
 
 @Component({
   selector: 'app-home',
