@@ -5,8 +5,8 @@
 <div id="avenidas"></div>
 <section class="seccion-container listItems-section" >
     <div class="wrapper-content"> 
-        <h1 class="animate__animated">Nuestras Avenidas</h1>
-        <p>El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.</p>
+        <h1 class="animate__animated animateFadeIn">Nuestras Avenidas</h1>
+        <p class="animate__animated animateFadeUp">El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.</p>
         <img src="assets/image/title-image.svg" alt="" class="title-image"> 
         <div class="row" >
             <div class="col-sm-2" *ngFor="let item of avenidas">
@@ -27,9 +27,15 @@
 
 <!--section customer-centricity-->
 <section class="thumbnail-seccion-container color-orange"id="Customer-Centricity">
-<!--<app-customer-centricity [avenida]="itemsAvenidas.item1"></app-customer-centricity> -->
-<!-- <app-sub-initiatives></app-sub-initiatives> -->
-<app-sub-initiatives-detail></app-sub-initiatives-detail>
+    <div class="section-action section-init ">
+        <app-customer-centricity [avenida]="itemsAvenidas.item1"></app-customer-centricity> 
+    </div>
+    <div class="section-action section-initiatives active">
+        <app-sub-initiatives></app-sub-initiatives> 
+    </div>
+    <div class="section-action section-initiatives-detail">
+        <app-sub-initiatives-detail></app-sub-initiatives-detail> 
+    </div>
 </section>
 <!--section customer-centricity-->
 

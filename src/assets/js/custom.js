@@ -8,8 +8,10 @@
 
 
 
-//scroll smooth
 function onInit(){
+
+
+//scroll smooth
   const links = document.querySelectorAll(".scroll-smooth");
 
   for (const link of links) {
@@ -24,7 +26,6 @@ function onInit(){
       behavior: "smooth"
     });
   }
-}
 //scroll smooth
 
 
@@ -50,9 +51,7 @@ window.addEventListener("scroll",function(e) {
   } else {
     arrow.classList.remove("arrow-active");
   }
-  if (scrollPosition < 1200) {
-    btns.classList.remove("menuActive");
-  }
+ 
 
   if (scrollPosition < 1300) {$('.scroll-smooth').removeClass('active')}
 //scroll position conditional
@@ -61,25 +60,74 @@ window.addEventListener("scroll",function(e) {
 // Animate section
 var scroll = window.requestAnimationFrame ||
   function(callback){ window.setTimeout(callback, 1000/60)};
-  var elementsToShow = document.querySelectorAll('.animate__animated'); 
-  var menuItemsToShow = document.querySelectorAll('.thumbnail-seccion-container'); 
- 
+  var animateLeftBounce = document.querySelectorAll('.align-left'); 
+  var animateRightBounce = document.querySelectorAll('.align-right'); 
+  var animateFadeIn = document.querySelectorAll('.animateFadeIn'); 
+  var animateFadeUp = document.querySelectorAll('.animateFadeUp'); 
+  var animateLeftBounce = document.querySelectorAll('.align-left'); 
+  var animateRightBounce = document.querySelectorAll('.align-right'); 
+  var animateFadeInRight = document.querySelectorAll('.animateFadeInRight'); 
+  var animateFadeInLeft = document.querySelectorAll('.animateFadeInLeft'); 
+  var animaterubberBand = document.querySelectorAll('.animaterubberBand');
+  var animateZoomIn = document.querySelectorAll('.animateZoomIn');
   function loop() {
-     Array.prototype.forEach.call(elementsToShow, function(element){
-       if (isElementInViewport(element)) {
-         element.classList.add('animate__');
+     Array.prototype.forEach.call(animateLeftBounce, function(el1){
+       if (isElementInViewport(el1)) {
+         el1.classList.add('animate__bounceInLeft');
        } else {
-         element.classList.remove('animate__');
+         el1.classList.remove('animate__bounceInLeft');
        }
      });
-     Array.prototype.forEach.call(menuItemsToShow, function(pp){
-      if (isElementInViewport(pp)) {
-        pp.classList.add('active');
+     Array.prototype.forEach.call(animateRightBounce, function(el2){
+      if (isElementInViewport(el2)) {
+        el2.classList.add('animate__bounceInRight');
       } else {
-        pp.classList.remove('active');
+        el2.classList.remove('animate__bounceInRight');
       }
     });
-    
+    Array.prototype.forEach.call(animateFadeIn, function(el3){
+      if (isElementInViewport(el3)) {
+        el3.classList.add('animate__fadeIn');
+      } else {
+        el3.classList.remove('animate__fadeIn');
+      }
+    });
+    Array.prototype.forEach.call(animateFadeUp, function(el4){
+     if (isElementInViewport(el4)) {
+      el4.classList.add('animate__fadeInUp');
+     } else {
+      el4.classList.remove('animate__fadeInUp');
+     }
+   });
+   Array.prototype.forEach.call(animateFadeInRight, function(el5){
+    if (isElementInViewport(el5)) {
+      el5.classList.add('animate__fadeInRight');
+    } else {
+      el5.classList.remove('animate__fadeInRight');
+    }
+  });
+  Array.prototype.forEach.call(animateFadeInLeft, function(el6){
+    if (isElementInViewport(el6)) {
+      el6.classList.add('animate__fadeInLeft');
+    } else {
+      el6.classList.remove('animate__fadeInLeft');
+    }
+  });
+  Array.prototype.forEach.call(animaterubberBand, function(el7){
+    if (isElementInViewport(el7)) {
+      el7.classList.add('animate__rubberBand');
+    } else {
+      el7.classList.remove('animate__rubberBand');
+    }
+  });
+  Array.prototype.forEach.call(animateZoomIn, function(el18){
+    if (isElementInViewport(el18)) {
+      el18.classList.add('animate__zoomIn');
+    } else {
+      el18.classList.remove('animate__zoomIn');
+    }
+  });
+  
 
     scroll(loop);
 }
@@ -143,5 +191,5 @@ $(document).ready(function() {
 });
 
 
-
+}
 

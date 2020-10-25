@@ -15,3 +15,11 @@
     left: 441px;
     top: -1px;
 }
+.line-customer{
+    width: 449px;
+    height: 2px;
+    left: 108px;
+    bottom: 1px;
+    position: absolute;
+    background-color: #333;
+}

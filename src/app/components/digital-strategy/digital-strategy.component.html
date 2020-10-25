@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-md-6">
             <img src="assets/image/Estrategia-Digital/celular.png" alt="celular"
-                class="thumbnail-seccion__image-1" />
+                class="thumbnail-seccion__image-1 animate__animated animateFadeUp" />
             <img src="assets/image/Estrategia-Digital/check.png" alt="check" class="thumbnail-seccion__image-2" />
             <img src="assets/image/Estrategia-Digital/mancha.png" alt="mancha"
-                class="thumbnail-seccion__image-3" />
+                class="thumbnail-seccion__image-3 animate__animated animaterubberBand" />
             <img src="assets/image/Estrategia-Digital/persona.png" alt="persona"
                 class="thumbnail-seccion__image-4" />
             <img src="assets/image/Estrategia-Digital/planta.png" alt="planta"
@@ -18,9 +18,9 @@
         </div>
         <div class="col-md-6">
             <div class="thumbnail-seccion-container__data">
-                <h2 class="animate__animated">{{avenida.title}}</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
-                <div class="thumbnail-seccion-container__action-buttons">
+                <h2 class="animate__animated animateFadeIn">{{avenida.title}}</h2>
+                <p class="animate__animated animateFadeUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+                <div class="thumbnail-seccion-container__action-buttons animate__animated align-right">
                 <button *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
                 </div>
             </div>
