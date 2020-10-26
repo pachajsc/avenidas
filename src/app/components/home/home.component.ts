@@ -21,6 +21,7 @@ export class HomeComponent implements OnInit {
   avenidas: IAvenidas[] = [];
   itemsAvenidas = null;
   language: string = '';
+  sticky: string = '';
 
   ngOnInit() {
     try {
@@ -33,7 +34,6 @@ export class HomeComponent implements OnInit {
   }
 
   handleSelectLanguage(language): void {
-
     this.store.dispatch(new SetLanguage(language));
     this.itemsAvenidas$.subscribe(
       (itemsAvenidas) => (this.itemsAvenidas = itemsAvenidas[language]),
@@ -42,7 +42,7 @@ export class HomeComponent implements OnInit {
       }
     );
     this.avenues$.subscribe(
-      (avenues) => this.avenidas = avenues[language],
+      (avenues) => (this.avenidas = avenues[language]),
       (error) => {
         throw error;
       }

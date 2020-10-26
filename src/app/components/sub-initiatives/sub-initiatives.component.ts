@@ -15,7 +15,8 @@ export class SubInitiativesComponent implements OnInit {
 
   avenuePath: string = '';
   subIniciatives: any[] = [];
-  volverPath:string=''
+  volverPath: string = '';
+  sticky: string = 'sticky';
 
   @Select(AvenuesState.selectedIniciatives) subIniciatives$: Observable<any[]>;
   ngOnInit(): void {
@@ -24,7 +25,7 @@ export class SubInitiativesComponent implements OnInit {
         this.router.navigate(['/']);
       } else {
         let subIniciativas = [];
-        this.volverPath = res.iniciative.href
+        this.volverPath = res.iniciative.href;
         if (res.iniciative.subIniciativas.length > 0) {
           for (let sub of res.iniciative.subIniciativas) {
             let model = {
@@ -39,8 +40,8 @@ export class SubInitiativesComponent implements OnInit {
       }
     });
   }
-  handleGoToSudIniciativeDetail(detail){
-     this.store.dispatch(new SetSubIniciatives(detail))
-     this.router.navigate(['/subiniciative/detail']);
+  handleGoToSudIniciativeDetail(detail) {
+    this.store.dispatch(new SetSubIniciatives(detail));
+    this.router.navigate(['/subiniciative/detail']);
   }
 }
