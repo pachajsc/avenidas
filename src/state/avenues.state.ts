@@ -81,6 +81,7 @@ export class AvenuesState {
                 return {
                   title: value.language.es.name,
                   href: navHref.find((e) => e.id === index + 1).href,
+                  description: value.language.es.description,
                   subIniciativas:
                     value.subIniciatives.length > 0
                       ? value.subIniciatives.map((sub) => {
@@ -109,6 +110,7 @@ export class AvenuesState {
                 return {
                   title: value.language.pt.name,
                   href: navHref.find((e) => e.id === index + 1).href,
+                  description: value.language.pt.description,
                   subIniciativas:
                     value.subIniciatives.length > 0
                       ? value.subIniciatives.map((sub) => {
