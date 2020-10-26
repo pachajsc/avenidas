@@ -1,6 +1,7 @@
-interface IProps{
-    src:string;
-    class:string;
+interface IProps {
+  src: string;
+  class: string;
+  href:string;
 }
 
 
@@ -25,7 +26,7 @@ export interface IIniciativas {
 }
 
 export interface IAvenidas extends IProps {
-  id?: string;
+  id?: number;
   title: string;
   iniciativas: IIniciativas[];
 }

@@ -1,5 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IAvenidas } from 'src/app/interfaces/avenidas';
+import { Router } from '@angular/router';
+import { SetIniciatives } from '../../../state/avenues.actions';
+import { Store } from '@ngxs/store';
 
 @Component({
   selector: 'app-technological-strategy',
@@ -7,7 +10,16 @@ import { IAvenidas } from 'src/app/interfaces/avenidas';
   styleUrls: ['./technological-strategy.component.css'],
 })
 export class TechnologicalStrategyComponent implements OnInit {
-  constructor() {}
+  constructor(private router: Router, private store: Store) {}
   @Input() avenida: IAvenidas;
   ngOnInit(): void {}
+
+  handleGotoSubIniciative(iniciative, avenida) {
+    let subInicitive: any = {
+      iniciative,
+      avenida,
+    };
+    this.store.dispatch(new SetIniciatives(subInicitive));
+    this.router.navigate(['/subiniciative']);
+  }
 }

@@ -11,9 +11,9 @@
                     <a href="#avenidas" class="scroll-smooth">Quiero conocer las Avenidas</a>
             </div>
 
-            <ul class="hero-content__lenguage">
-                <li><a href="#">Português</a></li>
-                <li><a href="#">Español</a></li>
+            <ul class="hero-content__lenguage" *ngIf="lenguaje">
+                <li (click)="selectLanguaje('pt')"><a href="#">Português</a></li>
+                <li (click)="selectLanguaje('es')"><a href="#">Español</a></li>
             </ul>
 
             <div class="hero-content__image-wrapper">

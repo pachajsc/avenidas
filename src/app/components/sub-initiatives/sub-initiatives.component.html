@@ -1,75 +1,21 @@
 <!--thumbnail-->
-<div class="thumbnail-container  wrapper-content">
-    <div class="row">
-        <div class="col-sm-4">
-            <div class="thumbnail-container__card card-button">
-                <div class="thumbnail-container__card-image">
-                    <img src="assets/image/img-thumbnails/img-1.jpg" />
-                </div>
-                <div class="thumbnail-container__card-text">
-                    <h2>Visión tecnológica 360 de los locales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat debitis amet
-                        natus dolore obcaecati optio, a eos. Nesciunt ipsam nam sequi voluptatem.</p>
-                </div>
-            </div>
+<app-hero [lenguaje]="false"></app-hero>
+<div class="thumbnail-container wrapper-content">
+  <h2>{{ avenuePath }}</h2><a href="{{volverPath}}">volver</a>
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let sub of subIniciatives">
+      <div
+        class="thumbnail-container__card card-button"
+        (click)="handleGoToSudIniciativeDetail(sub)"
+      >
+        <div class="thumbnail-container__card-image">
+          <img src="{{ sub.src }}" />
         </div>
-        <div class="col-sm-4">
-            <div class="thumbnail-container__card">
-                <div class="thumbnail-container__card-image">
-                    <img src="assets/image/img-thumbnails/img-2.jpg" />
-                </div>
-                <div class="thumbnail-container__card-text">
-                    <h2>Visión tecnológica 360 de los locales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adip</p>
-                </div>
-            </div>
+        <div class="thumbnail-container__card-text">
+          <h2>{{ sub.title }}</h2>
+          <p>{{ sub.description }}</p>
         </div>
-        <div class="col-sm-4">
-            <div class="thumbnail-container__card">
-                <div class="thumbnail-container__card-image">
-                    <img src="assets/image/img-thumbnails/img-3.jpg" />
-                </div>
-                <div class="thumbnail-container__card-text">
-                    <h2>Visión tecnológica 360 de los locales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat debitis amet
-                        natus dolore obcaecati optio, a eos. </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail-container__card">
-                <div class="thumbnail-container__card-image">
-                    <img src="assets/image/img-thumbnails/img-4.jpg" />
-                </div>
-                <div class="thumbnail-container__card-text">
-                    <h2>Visión tecnológica 360 de los locales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat debitis amet
-                        natus dolore obcaecati optio, a eos. Nesciunt ipsam nam sequi voluptatem.</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail-container__card">
-                <div class="thumbnail-container__card-image">
-                    <img src="assets/image/img-thumbnails/img-5.jpg" />
-                </div>
-                <div class="thumbnail-container__card-text">
-                    <h2>Visión tecnológica 360 de los locales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adip</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="thumbnail-container__card">
-                <div class="thumbnail-container__card-image">
-                    <img src="assets/image/img-thumbnails/img-6.jpg" />
-                </div>
-                <div class="thumbnail-container__card-text">
-                    <h2>Visión tecnológica 360 de los locales</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate repellat debitis amet
-                        natus dolore obcaecati optio, a eos. </p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </div>

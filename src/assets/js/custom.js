@@ -7,7 +7,6 @@
 // });
 
 
-
 //scroll smooth
 function onInit(){
   const links = document.querySelectorAll(".scroll-smooth");
@@ -50,9 +49,9 @@ window.addEventListener("scroll",function(e) {
   } else {
     arrow.classList.remove("arrow-active");
   }
-  if (scrollPosition < 1200) {
-    btns.classList.remove("menuActive");
-  }
+  // if (scrollPosition < 1200) {
+  //   btns.classList.remove("menuActive");
+  // }
 
   if (scrollPosition < 1300) {$('.scroll-smooth').removeClass('active')}
 //scroll position conditional
@@ -104,7 +103,7 @@ function isElementInViewport(el) {
 }
 // Animate section
 var scrollDistance = $(window).scrollTop();
- console.log('distancia', scrollDistance)
+ 
   // Show/hide menu on scroll
   //if (scrollDistance >= 850) {
   //		$('nav').fadeIn("fast");
@@ -122,22 +121,26 @@ var scrollDistance = $(window).scrollTop();
 
 }, true)
 
-
-
 $(document).ready(function() {
-  $('a[href*=#]').bind('click', function(e) {
-      e.preventDefault(); // prevent hard jump, the default behavior
+  $("a[href*=#]").bind("click", function (e) {
+    e.preventDefault(); // prevent hard jump, the default behavior
 
-      var target = $(this).attr("href"); // Set the target as variable
+    var target = $(this).attr("href"); // Set the target as variable
 
-      // perform animated scrolling by getting top-position of target-element and set it as scroll target
-      $('html, body').stop().animate({
-          scrollTop: $(target).offset().top
-      }, 600, function() {
+    // perform animated scrolling by getting top-position of target-element and set it as scroll target
+    $("html, body")
+      .stop()
+      .animate(
+        {
+          scrollTop: $(target).offset().top,
+        },
+        600,
+        function () {
           location.hash = target; //attach the hash (#jumptarget) to the pageurl
-      });
+        }
+      );
 
-      return false;
+    return false;
   });
   
 });
