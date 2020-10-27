@@ -1,8 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxsModule } from '@ngxs/store';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import {InMemoryDataAvenidasService} from '../app/services/in-memory-data-avenidas.service';
+import { InMemoryDataAvenidasService } from '../app/services/in-memory-data-avenidas.service';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +19,7 @@ import { DigitalStrategyComponent } from './components/digital-strategy/digital-
 import { TechnologicalStrategyComponent } from './components/technological-strategy/technological-strategy.component';
 import { TalentManagementComponent } from './components/talent-management/talent-management.component';
 import { NewITModelComponent } from './components/new-itmodel/new-itmodel.component';
+import { AvenuesState } from '../state/avenues.state';
 
 @NgModule({
   declarations: [
@@ -31,13 +34,16 @@ import { NewITModelComponent } from './components/new-itmodel/new-itmodel.compon
     DigitalStrategyComponent,
     TechnologicalStrategyComponent,
     TalentManagementComponent,
-    NewITModelComponent
+    NewITModelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataAvenidasService),
+    NgxsModule.forRoot([AvenuesState], {
+      developmentMode: !environment.production,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

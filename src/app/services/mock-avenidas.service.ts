@@ -11,7 +11,7 @@ export class MockAvenidasService {
   constructor(private http: HttpClient) {}
   private avenidasUrl = 'api/avenidas'; // URL to web api
 
-  getAvenidas(): Observable<IAvenidas[]> {
-    return this.http.get<IAvenidas[]>(this.avenidasUrl);
+  getAvenidas(): Observable<any> {
+    return this.http.get<any>(this.avenidasUrl);
   }
 }
