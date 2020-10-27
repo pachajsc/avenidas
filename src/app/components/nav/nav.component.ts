@@ -7,7 +7,7 @@ import { Component, OnInit ,Input } from '@angular/core'
 })
 export class NavComponent implements OnInit {
   constructor() {}
-  @Input() sticky:string
+  @Input() stickyNav:string
 
   ngOnInit() {}
 }

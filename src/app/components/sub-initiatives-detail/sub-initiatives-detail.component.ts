@@ -13,7 +13,7 @@ export class SubInitiativesDetailComponent implements OnInit {
   @Select(AvenuesState.selectedSubIniciatives)
   subIniciativesDetail$: Observable<any>;
   detail: any = {};
-  sticky: string = 'sticky';
+  stickyNav: string = 'stickyNav';
 
   ngOnInit(): void {
     this.subIniciativesDetail$.subscribe((res) => (this.detail = res));

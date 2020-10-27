@@ -12,6 +12,9 @@
 .nav-content.sticky{
     top:0;
 }
+.nav-content.stickyNav{
+    top:0!important;
+}
 .nav-content ul{
     text-align:center;
     margin:auto;

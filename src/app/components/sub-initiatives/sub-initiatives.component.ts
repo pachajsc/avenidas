@@ -16,7 +16,7 @@ export class SubInitiativesComponent implements OnInit {
   avenuePath: string = '';
   subIniciatives: any[] = [];
   volverPath: string = '';
-  sticky: string = 'sticky';
+  stickyNav: string = 'stickyNav';
   description:string=''
 
   @Select(AvenuesState.selectedIniciatives) subIniciatives$: Observable<any[]>;
