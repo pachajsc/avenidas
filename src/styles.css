@@ -106,4 +106,33 @@
 /*section component*/
 
 
-/*ejemplo*/
+/*breadcrum*/
+/*bredcrum bar component*/
+.bredcrum-bar-content{
+    width:100%;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px; 
+    color:#707070;
+}
+.bredcrum-bar-content--between{
+    display: flex;
+    flex-direction: row;
+    place-content: space-between;
+    align-items: center;
+}
+.bredcrum-bar-content__left a {
+    font-weight:600;
+    color:#FF8F17;
+}
+.bredcrum-bar-content__right  {
+    font-weight:600;
+    color:#FF8F17;
+}
+.bredcrum-bar-content__right img {
+    display: inline-block;
+    margin-right:7px;
+    position:relative;
+    top:4px;
+}
