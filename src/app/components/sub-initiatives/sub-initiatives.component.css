@@ -1,8 +1,11 @@
 /*card thumbnail component*/
 .thumbnail-container{
-    margin-top:150px;
-    min-height:500px;
-   
+    padding-top:160px;
+    min-height:850px;
+    background-color: #ececec9e;
+}
+.thumbnail-container p{
+    margin-bottom:30px;
 }
 .thumbnail-container__card{
     background: #FFFFFF;

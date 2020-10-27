@@ -1,6 +1,7 @@
 /*section items*/
 .listItems-section{
     padding:50px 0 85px 0;
+    min-height: 430px;
 }
 .listItems-section h1{
     font-style: normal;
@@ -59,6 +60,8 @@
     text-align: center;
     color: #0089FF;
     letter-spacing: 0.5px;
+    width: 107px;
+    margin: auto;
 }
 .listItems-section ul{
     list-style-type: circle;

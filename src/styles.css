@@ -110,6 +110,7 @@
 /*bredcrum bar component*/
 .bredcrum-bar-content{
     width:100%;
+    margin-bottom:30px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;

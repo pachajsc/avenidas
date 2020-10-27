@@ -103,7 +103,10 @@ function isElementInViewport(el) {
 }
 // Animate section
 var scrollDistance = $(window).scrollTop();
- 
+
+$('.thumbnail-seccion-container__action-buttons').click(function(){
+  document.body.scrollTop = document.documentElement.scrollTop = 0;
+})
   // Show/hide menu on scroll
   //if (scrollDistance >= 850) {
   //		$('nav').fadeIn("fast");

@@ -40,7 +40,7 @@ export class SubInitiativesComponent implements OnInit {
           }
         }
         this.subIniciatives = subIniciativas;
-        this.avenuePath = `Avenidas Estratégicas / ${res.avenida} / ${res.iniciative.title}`;
+        this.avenuePath = `Avenidas Estratégicas / ${res.avenida} / `;
       }
     });
   }

@@ -1,22 +1,33 @@
-<!--thumbnail-->
-<!-- <app-hero [lenguaje]="false"></app-hero> -->
-<div id="top"></div>
-<app-nav [stickyNav]="stickyNav"></app-nav>
-<div class="thumbnail-container wrapper-content">
-  <h2>{{ avenuePath }}</h2><a href="{{volverPath}}">volver</a>
-  <h2>{{description}}</h2>
-  <div class="row">
-    <div class="col-sm-4" *ngFor="let sub of subIniciatives">
-      <div
-        class="thumbnail-container__card card-button"
-        (click)="handleGoToSudIniciativeDetail(sub)"
-      >
-        <div class="thumbnail-container__card-image">
-          <img src="{{ sub.src }}" />
+<div class="animate__animated animate__fadeIn">
+  <!--thumbnail-->
+  <div id="top"></div>
+  <app-nav [stickyNav]="stickyNav"></app-nav>
+  <div class="thumbnail-container">
+    <div class="wrapper-content">
+      <!--bredcrum-->
+      <div class="bredcrum-bar-content">
+        <div class="bredcrum-bar-content--between">
+          <div class="bredcrum-bar-content__left">
+            <span>{{ avenuePath }} </span><a>Vision 360</a>
+          </div>
+          <div class="bredcrum-bar-content__right">
+            <img src="assets/image/arrow-left.png" alt="arrow" /><a href="{{volverPath}}">Volver</a>
+          </div>
         </div>
-        <div class="thumbnail-container__card-text">
-          <h2>{{ sub.title }}</h2>
-          <p>{{ sub.description }}</p>
+      </div>
+      <!--bredcrum-->
+      <p>{{description}}</p>
+      <div class="row">
+        <div class="col-sm-4" *ngFor="let sub of subIniciatives">
+          <div class="thumbnail-container__card card-button" (click)="handleGoToSudIniciativeDetail(sub)">
+            <div class="thumbnail-container__card-image">
+              <img src="{{ sub.src }}" />
+            </div>
+            <div class="thumbnail-container__card-text">
+              <h2>{{ sub.title }}</h2>
+              <p>{{ sub.description }}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

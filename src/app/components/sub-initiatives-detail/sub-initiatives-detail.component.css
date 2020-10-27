@@ -1,6 +1,8 @@
 /*card thumbnail component detail*/
 .thumbnail-detail-container{
-    margin-top:150px;
+    padding-top:160px;
+    background-color: #ececec9e;
+    min-height:850px;
 }
 .thumbnail-detail-container h1{
     font-style: normal;
