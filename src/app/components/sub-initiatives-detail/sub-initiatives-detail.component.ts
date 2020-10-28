@@ -14,8 +14,13 @@ export class SubInitiativesDetailComponent implements OnInit {
   subIniciativesDetail$: Observable<any>;
   detail: any = {};
   stickyNav: string = 'stickyNav';
+  avenuePath:string =''
 
   ngOnInit(): void {
-    this.subIniciativesDetail$.subscribe((res) => (this.detail = res));
+    this.subIniciativesDetail$.subscribe((res) => {
+      this.detail = res.detail;
+      this.avenuePath = `${res.avenuePath}`;
+
+    });
   }
 }
