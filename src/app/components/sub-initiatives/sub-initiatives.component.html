@@ -3,7 +3,7 @@
   <div id="top"></div>
   <app-nav [stickyNav]="stickyNav"></app-nav>
   <div class="thumbnail-container">
-    <div class="wrapper-content">
+    <div *ngIf="loading" class="wrapper-content">
       <!--bredcrum-->
       <div class="bredcrum-bar-content">
         <div class="bredcrum-bar-content--between">
@@ -11,7 +11,8 @@
             <span>{{ avenuePath }}</span>
           </div>
           <div class="bredcrum-bar-content__right">
-            <img src="assets/image/arrow-left.png" alt="arrow" /><a href="{{volverPath}}">Volver</a>
+            <a href="{{volverPath}}">
+            <img src="assets/image/arrow left.png" alt="arrow" />Volver</a>
           </div>
         </div>
       </div>
@@ -20,7 +21,7 @@
       <p>{{description}}</p>
       <div class="row">
         <div class="col-sm-4" *ngFor="let sub of subIniciatives">
-          <div class="thumbnail-container__card card-button" (click)="handleGoToSudIniciativeDetail(sub)">
+          <div class="thumbnail-container__card card-button" (click)="handleGoToSudIniciativeDetail(sub,avenuePath)">
             <div class="thumbnail-container__card-image">
               <img src="{{ sub.src }}" />
             </div>
