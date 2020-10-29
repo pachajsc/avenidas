@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   avenidas: IAvenidas[] = [];
   itemsAvenidas = null;
   language: string = '';
-  sticky: string = '';
+
 
   ngOnInit() {
     try {

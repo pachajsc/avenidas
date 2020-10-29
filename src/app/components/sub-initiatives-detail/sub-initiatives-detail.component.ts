@@ -13,7 +13,6 @@ export class SubInitiativesDetailComponent implements OnInit {
   @Select(AvenuesState.selectedSubIniciatives)
   subIniciativesDetail$: Observable<any>;
   detail: any = {};
-  stickyNav: string = 'stickyNav';
   avenuePath:string =''
 
   ngOnInit(): void {

@@ -16,7 +16,7 @@ export class SubInitiativesComponent implements OnInit {
   avenuePath: string = '';
   subIniciatives: any[] = [];
   volverPath: string = '';
-  stickyNav: string = 'stickyNav';
+ 
   description: string = '';
   title: string = '';
   loading: boolean = false;

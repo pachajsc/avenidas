@@ -1,5 +1,11 @@
-function onInit() {
+$(document).ready(function(){
+  $('.thumbnail-seccion-container__action-buttons').click(function(){
+    $('.nav-content').addClass('stickyNav')
+  })
+})
 
+
+function onInit() {
   //scroll smooth
   const links = document.querySelectorAll(".scroll-smooth");
 
