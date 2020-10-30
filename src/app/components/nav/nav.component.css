@@ -12,6 +12,13 @@
 .nav-content.sticky{
     top:0;
 }
+nav{
+    display:none;
+}
+nav.active-nav{
+    display:block;
+}
+
 .nav-content.stickyNav{
     top:0!important;
 }

@@ -2,54 +2,27 @@
 
 <div class="wrapper-content">
   <div class="row">
+
     <div class="col-md-6">
       <div class="thumbnail-seccion-container__data">
-        <h2 class="animate__animated">{{ avenida.title }}</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor
-        </p>
-        <div class="thumbnail-seccion-container__action-buttons">
-          <button
-            *ngFor="let item of avenida.iniciativas"
-            (click)="handleGotoSubIniciative(item, avenida.title)"
-          >
-            {{ item.title }}
-          </button>
-        </div>
+          <h2 class="animate__animated animateFadeIn">{{avenida.title}}</h2>
+          <p class="animate__animated animateFadeUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+          <div class="thumbnail-seccion-container__action-buttons animate__animated align-left">
+          <button (click)="handleGotoSubIniciative(item, avenida.title)" *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
+          </div>
       </div>
-    </div>
+  </div>
     <div class="col-md-6">
-      <img
-        src="assets/image/Nuevo-Modelo-TI/mancha.png"
-        alt="mancha"
-        class="thumbnail-seccion__image-1"
-      />
-      <img
-        src="assets/image/Nuevo-Modelo-TI/pensamiento.png"
-        alt="pensamiento"
-        class="thumbnail-seccion__image-2"
-      />
-      <img
-        src="assets/image/Nuevo-Modelo-TI/persona-1.png"
-        alt="persona-1"
-        class="thumbnail-seccion__image-3"
-      />
-      <img
-        src="assets/image/Nuevo-Modelo-TI/persona-2.png"
-        alt="persona-2"
-        class="thumbnail-seccion__image-4"
-      />
-      <img
-        src="assets/image/Nuevo-Modelo-TI/planta.png"
-        alt="planta"
-        class="thumbnail-seccion__image-5"
-      />
-      <img
-        src="assets/image/Nuevo-Modelo-TI/tablero.png"
-        alt="tablero"
-        class="thumbnail-seccion__image-6"
-      />
-    </div>
+      <img src="assets/image/Nuevo-Modelo-TI/mancha.png" alt="mancha" class="thumbnail-seccion__image-1 animate__animated animaterubberBand" />
+      <img src="assets/image/Nuevo-Modelo-TI/pensamiento.png" alt="pensamiento"
+          class="thumbnail-seccion__image-2 animate__animated animateFadeUp" />
+      <img src="assets/image/Nuevo-Modelo-TI/persona-1.png" alt="persona-1"
+          class="thumbnail-seccion__image-3" />
+      <img src="assets/image/Nuevo-Modelo-TI/persona-2.png" alt="persona-2"
+          class="thumbnail-seccion__image-4" />
+      <img src="assets/image/Nuevo-Modelo-TI/planta.png" alt="planta" class="thumbnail-seccion__image-5" />
+      <img src="assets/image/Nuevo-Modelo-TI/tablero.png" alt="tablero"
+          class="thumbnail-seccion__image-6 animate__animated animateFadeIn" />
+  </div>
   </div>
 </div>
