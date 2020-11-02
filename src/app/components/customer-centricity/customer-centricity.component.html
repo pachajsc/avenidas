@@ -19,7 +19,7 @@
           <h2 class="animate__animated animateFadeIn">{{avenida.title}}</h2>
           <p class="animate__animated animateFadeUp">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
           <div class="thumbnail-seccion-container__action-buttons animate__animated align-right">
-          <button (click)="handleGotoSubIniciative(item, avenida.title)" *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
+          <button (click)="handleGotoSubIniciative(item, avenida)" *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
           </div>
       </div>
   </div>

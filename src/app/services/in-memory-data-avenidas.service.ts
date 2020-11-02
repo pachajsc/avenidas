@@ -12,6 +12,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
         avenues: [
           {
             name: 'Customer Centricity',
+            path: 'customer-centricity',
             totalIniciatives: 2,
             iniciatives: [
               {
@@ -21,11 +22,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Visión 360',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'vision-360',
                   },
                   pt: {
                     name: 'Visão 360',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'visao-360',
                   },
                 },
                 createdAt: '2020-10-20T16:52:15.466Z',
@@ -44,6 +47,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country español',
                         businessUnit: 'Unidad de negocio español',
                         flag: 'bandera español',
+                        path: 'comprobación-del-estado-del-proceso-empresarial',
                       },
                       pt: {
                         name: 'Health Check de processo de negocios',
@@ -56,6 +60,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country portugues',
                         businessUnit: 'Unidad de negocio portugues',
                         flag: 'bandera portugues',
+                        path: 'health-check-de-processo-de-negocios',
                       },
                     },
                     createdAt: '2020-10-21T16:18:39.683Z',
@@ -95,6 +100,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country español',
                         businessUnit: 'Unidad de negocio español',
                         flag: 'bandera español',
+                        path: 'vision-tecnológica-360-de-los-locales',
                       },
                       pt: {
                         name: 'Visão 360 tecnológica das instalações',
@@ -107,6 +113,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country portugues',
                         businessUnit: 'Unidad de negocio portugues',
                         flag: 'bandera portugues',
+                        path: 'visao-360-tecnológica-das-instalacoes',
                       },
                     },
                     createdAt: '2020-10-21T16:18:39.683Z',
@@ -146,6 +153,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country español',
                         businessUnit: 'Unidad de negocio español',
                         flag: 'bandera español',
+                        path: 'sap-solman-indicadores-de-negocio',
                       },
                       pt: {
                         name: 'Indicadores de negócios SAP SOLMAN',
@@ -158,6 +166,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country portugues',
                         businessUnit: 'Unidad de negocio portugues',
                         flag: 'bandera portugues',
+                        path: 'indicadores-de-negócios-sap-solman',
                       },
                     },
                     createdAt: '2020-10-21T16:18:39.683Z',
@@ -197,6 +206,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country español',
                         businessUnit: 'Unidad de negocio español',
                         flag: 'bandera español',
+                        path: 'visibilidad-de-trafico',
                       },
                       pt: {
                         name: 'Visibilidade do trânsito',
@@ -209,6 +219,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         country: 'country portugues',
                         businessUnit: 'Unidad de negocio portugues',
                         flag: 'bandera portugues',
+                        path: 'visibilidade-do-transito',
                       },
                     },
                     createdAt: '2020-10-21T16:18:39.683Z',
@@ -259,11 +270,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Interación Directa y Personalización',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'interación-directa-y-personalización',
                   },
                   pt: {
                     name: 'Interação direta e personalização',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'interacao-direta-e-personalizacao',
                   },
                 },
                 createdAt: '2020-10-21T11:41:04.389Z',
@@ -289,6 +302,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
           },
           {
             name: 'Cyberseguridad y Compliance',
+            path: 'cyberseguridad-y-compliance',
             totalIniciatives: 2,
             iniciatives: [
               {
@@ -298,11 +312,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Compiliance Regulatorio',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'compiliance-regulatorio',
                   },
                   pt: {
                     name: 'Conformidade regulatória',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'conformidade-regulatória',
                   },
                 },
                 createdAt: '2020-10-20T16:52:15.466Z',
@@ -331,11 +347,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Prevencion de Cyberamenazas',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'prevencion-de-cyberamenazas',
                   },
                   pt: {
                     name: 'Prevenção de ameaças cibernéticas',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'prevencao-de-ameacas-ciberneticas',
                   },
                 },
                 createdAt: '2020-10-21T11:41:04.389Z',
@@ -361,6 +379,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
           },
           {
             name: 'Estrategia digital',
+            path: 'estrategia-digital',
             totalIniciatives: 3,
             iniciatives: [
               {
@@ -370,11 +389,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Ecosistema de Colaboración Digital',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'ecosistema-de-colaboracion-digital',
                   },
                   pt: {
                     name: 'Ecossistema de colaboração digital',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'ecossistema-de-colaboracao-digital',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -403,11 +424,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Automatización de Procesos de Negocio',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'automatizacion-de-procesos-de-negocio',
                   },
                   pt: {
                     name: 'Automação de Processos de Negócios',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'automacao-de-processos-de-negocios',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -428,11 +451,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Digitalización de Experiencia de Cliente',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'digitalizacion-de-experiencia-de-cliente',
                   },
                   pt: {
                     name: 'Digitalização da Experiência do Cliente',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'Digitalizacao-da-experiencia-do-cliente',
                   },
                 },
                 createdAt: '2020-10-19T17:29:37.676Z',
@@ -450,6 +475,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
           },
           {
             name: 'Estrategia Tecnológica',
+            path: 'estrategia-tecnológica',
             totalIniciatives: 3,
             iniciatives: [
               {
@@ -459,11 +485,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Mapa de Obsolescencia',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'mapa-de-obsolescencia',
                   },
                   pt: {
                     name: 'Mapa de Obsolescência',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    ṕath: 'mapa-de-obsolescencia',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -492,11 +520,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Migración de Cloud',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'migración-de-cloud',
                   },
                   pt: {
                     name: 'Migração de Cloud',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'migracao-de-cloud',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -517,11 +547,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Racionalización de Aplicaciones',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'racionalizacion-de-aplicaciones',
                   },
                   pt: {
                     name: 'Racionalizando aplicativos',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'racionalizando-aplicativos',
                   },
                 },
                 createdAt: '2020-10-19T17:29:37.676Z',
@@ -539,6 +571,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
           },
           {
             name: 'Gestión de Talento',
+            path: 'gestion-de-talento',
             totalIniciatives: 3,
             iniciatives: [
               {
@@ -548,11 +581,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Atracción, retención y Desarrollo de Talento',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'atraccion-retención-y-desarrollo-de-talento',
                   },
                   pt: {
                     name: 'Atração, retenção e desenvolvimento de talentos',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'atracao-retencao-e-desenvolvimento-de-talentos',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -581,11 +616,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Identificación y Gestión de Talento',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'identificacion-y-gestion-de-talento',
                   },
                   pt: {
                     name: 'Identificação e gestão de talentos',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'identificacao-e-gestao-de-talentos',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -606,11 +643,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Plan de Reconocimiento',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'plan-de-reconocimiento',
                   },
                   pt: {
                     name: 'Plano de Reconhecimento',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'plano-de-reconhecimento',
                   },
                 },
                 createdAt: '2020-10-19T17:29:37.676Z',
@@ -628,6 +667,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
           },
           {
             name: 'Nuevo Modelo TI',
+            path: 'nuevo-modelo-it',
             totalIniciatives: 3,
             iniciatives: [
               {
@@ -637,11 +677,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Gestión de OPEX',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'gestion-de-opex',
                   },
                   pt: {
                     name: 'Gestão OPEX',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'gestao-opex',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -670,11 +712,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Gestión de PROYECTOS CAPEX',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'gestion-de-proyectos-capex',
                   },
                   pt: {
                     name: 'Gestão de CAPEX PROJETO',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'gestao-de-capex-projeto',
                   },
                 },
                 createdAt: '2020-10-19T17:18:38.433Z',
@@ -695,11 +739,13 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                     name: 'Gobierno TI',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'gobierno-ti',
                   },
                   pt: {
                     name: 'Governança de TI',
                     description:
                       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+                    path: 'governanca-de-ti',
                   },
                 },
                 createdAt: '2020-10-19T17:29:37.676Z',

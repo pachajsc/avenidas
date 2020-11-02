@@ -12,12 +12,12 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'subiniciative',
+    path: ':avenue/:iniciative',
 
     component: SubInitiativesComponent,
   },
   {
-    path: 'subiniciative/detail',
+    path: ':avenue/:iniciative/:subinitiative',
     component: SubInitiativesDetailComponent,
   },
 ];

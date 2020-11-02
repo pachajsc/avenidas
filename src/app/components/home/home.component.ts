@@ -5,6 +5,7 @@ import { Select, Store } from '@ngxs/store';
 import { GetAvenues, SetLanguage } from './../../../state/avenues.actions';
 import { AvenuesState } from '../../../state/avenues.state';
 import { Observable } from 'rxjs';
+import {itemsAvenidas} from '../../utils'
 
 @Component({
   selector: 'app-home',
@@ -19,9 +20,8 @@ export class HomeComponent implements OnInit {
   @Select(AvenuesState.getLanguage) stateLanguage$: Observable<string>;
 
   avenidas: IAvenidas[] = [];
-  itemsAvenidas = null;
+  itemsAvenidas: any = itemsAvenidas;
   language: string = '';
-
 
   ngOnInit() {
     try {

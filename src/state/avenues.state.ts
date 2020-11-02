@@ -9,12 +9,16 @@ import {
 import { MockAvenidasService } from '../app/services/mock-avenidas.service';
 import { navHref, itemsAvenidas } from '../app/utils/';
 
+const lang= navigator.languages.filter(
+  (lang) => lang === 'es' || lang === 'pt'
+);
+
 export class AvenuesStateModel {
   public selectedIniciatives: any[];
   public selectedSubIniciatives: any;
   public itemsAvenues: any;
   public avenues: any;
-  public language:string;
+  public language: string;
 }
 
 @State<AvenuesStateModel>({
@@ -24,12 +28,11 @@ export class AvenuesStateModel {
     selectedSubIniciatives: null,
     itemsAvenues: { es: {}, pt: {} },
     avenues: { es: [], pt: [] },
-    language: 'es',
+    language: lang.length > 0 ? lang[0] : 'pt',
   },
 })
 @Injectable()
 export class AvenuesState {
-  
   constructor(private readonly mockAvenidas: MockAvenidasService) {}
 
   itemsAvenidas = { es: itemsAvenidas, pt: itemsAvenidas };
@@ -77,10 +80,12 @@ export class AvenuesState {
               src: `assets/image/icono-avenidas-${index + 1}.png`,
               class: `circle-icon-${index + 1}`,
               href: navHref.find((e) => e.id === index + 1).href,
+              path: value.path,
               iniciativas: value.iniciatives.map((value) => {
                 return {
                   title: value.language.es.name,
                   href: navHref.find((e) => e.id === index + 1).href,
+                  path: value.language.es.path,
                   description: value.language.es.description,
                   subIniciativas:
                     value.subIniciatives.length > 0
@@ -94,6 +99,7 @@ export class AvenuesState {
                             impact: sub.language.es.impact,
                             scope: sub.language.es.scope,
                             files: sub.files,
+                            path: sub.language.es.path,
                           };
                         })
                       : [],
@@ -106,10 +112,12 @@ export class AvenuesState {
               src: `assets/image/icono-avenidas-${index + 1}.png`,
               class: `circle-icon-${index + 1}`,
               href: navHref.find((e) => e.id === index + 1).href,
+              path: value.path,
               iniciativas: value.iniciatives.map((value) => {
                 return {
                   title: value.language.pt.name,
                   href: navHref.find((e) => e.id === index + 1).href,
+                  path: value.language.pt.path,
                   description: value.language.pt.description,
                   subIniciativas:
                     value.subIniciatives.length > 0
@@ -123,6 +131,7 @@ export class AvenuesState {
                             impact: sub.language.pt.impact,
                             scope: sub.language.pt.scope,
                             files: sub.files,
+                            path: sub.language.pt.path,
                           };
                         })
                       : [],
@@ -135,6 +144,7 @@ export class AvenuesState {
                 ...this.itemsAvenidas.es,
                 [`item${index + 1}`]: {
                   title: modelAvenuesEs.title,
+                  path: modelAvenuesEs.path,
                   iniciativas: modelAvenuesEs.iniciativas,
                 },
               },
@@ -142,6 +152,7 @@ export class AvenuesState {
                 ...this.itemsAvenidas.pt,
                 [`item${index + 1}`]: {
                   title: modelAvenuesPt.title,
+                  path: modelAvenuesPt.path,
                   iniciativas: modelAvenuesPt.iniciativas,
                 },
               },

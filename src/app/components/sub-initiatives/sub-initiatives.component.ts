@@ -16,7 +16,7 @@ export class SubInitiativesComponent implements OnInit {
   avenuePath: string = '';
   subIniciatives: any[] = [];
   volverPath: string = '';
- 
+  path: string = '';
   description: string = '';
   title: string = '';
   loading: boolean = false;
@@ -31,6 +31,7 @@ export class SubInitiativesComponent implements OnInit {
         this.volverPath = res.iniciative.href;
         this.description = res.iniciative.description;
         this.title = res.iniciative.title;
+        this.path = res.path;
         if (res.iniciative.subIniciativas.length > 0) {
           for (let sub of res.iniciative.subIniciativas) {
             let model = {
@@ -41,15 +42,23 @@ export class SubInitiativesComponent implements OnInit {
           }
         }
         this.subIniciatives = subIniciativas;
-        this.avenuePath = `Avenidas Estratégicas / ${res.avenida}`;
+        this.avenuePath = `Avenidas Estratégicas / ${res.avenida.title}`;
         // / ${res.iniciative.title}
         this.loading = true;
       }
     });
   }
   handleGoToSudIniciativeDetail(detail, avenuePath) {
-    let data = { detail, avenuePath };
+    let data = {
+      detail,
+      avenuePath: `${avenuePath} / ${this.title} `,
+      path: this.path,
+    };
     this.store.dispatch(new SetSubIniciatives(data));
-    this.router.navigate(['/subiniciative/detail']);
+    this.router.navigate([`${this.path}/${detail.path}`]);
+  }
+
+  toLink(url: string) {
+    return url;
   }
 }

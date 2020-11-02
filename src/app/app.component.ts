@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Inject, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +8,11 @@ import { Component, OnInit } from '@angular/core';
   providers: [],
 })
 export class AppComponent implements OnInit {
-  constructor() {}
+  constructor(@Inject(DOCUMENT) private document: Document) {}
   ngOnInit() {
-    
+    const lang = navigator.languages.filter(
+      (lang) => lang === 'es' || lang === 'pt'
+    );
+    this.document.documentElement.lang = lang.length > 0 ? lang[0] : 'en';
   }
 }

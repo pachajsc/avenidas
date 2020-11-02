@@ -1,52 +1,66 @@
-<div class="animate__animated animate__fadeIn ">
-<!--thumbnail detail-->
-<div id="top"></div>
-<div class="thumbnail-detail-container">
+<div class="animate__animated animate__fadeIn">
+  <!--thumbnail detail-->
+  <div id="top"></div>
+  <div class="thumbnail-detail-container">
     <div class="wrapper-content">
-    <!--bredcrum-->
-    <div class="bredcrum-bar-content">
-        <div class="wrapper-content bredcrum-bar-content--between">
-            <div class="bredcrum-bar-content__left">
-                <span>{{avenuePath}}</span> / vision 360
-            </div>
-            <div class="bredcrum-bar-content__right">
-                <a [routerLink]="['/subiniciative']"><img src="assets/image/arrow-left.png" alt="arrow" />Volver</a>
-            </div>
+      <!--bredcrum-->
+      <div class="bredcrum-bar-content">
+        <div class="bredcrum-bar-content--between">
+          <div class="bredcrum-bar-content__left">
+            <span>{{ avenuePath }}</span>
+          </div>
+          <div class="bredcrum-bar-content__right">
+            <a [routerLink]="toLink(volverPath)">
+              <img src="assets/image/arrow-left.png" alt="arrow" />Volver</a
+            >
+          </div>
         </div>
-    </div>
-    <!--bredcrum-->
-        <h1>{{detail.title}}</h1>
-        <p>{{detail.description}}</p>
-        <div class="row">
-            <div class="col-md-8">
-                <div class="row">
-                    <div class="col-md-7">
-                        <div class="thumbnail-detail-container__image-container">
-                            <img src="{{detail.src}}" />
-                        </div>
-                    </div>
-                    <div class="col-md-5">
-                        <ul class="thumbnail-detail-container__detaild-items">
-                            <li><b>Responsable sub iniciativa: </b>{{detail.responsable}}</li>
-                            <li><b>Estado: </b>{{detail.state}}</li>
-                            <li><b>Impacto: </b>{{detail.impact}}</li>
-                            <li><b>Alcance: </b>{{detail.scope}}</li>
-                        </ul>
-                    </div>
-                </div>
+      </div>
+      <!--bredcrum-->
+      <h1>{{ detail.title }}</h1>
+      <p>{{ detail.description }}</p>
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="thumbnail-detail-container__image-container">
+                <img src="{{ detail.src }}" />
+              </div>
             </div>
-            <div class="col-md-4">
-                <h3>Archivos disponibles</h3>
-                <ul class="thumbnail-detail-container__icon-file">
-                    <li><a><img src="assets/image/file-txt.png"/></a></li>
-                    <li><a><img src="assets/image/file-txt.png"/></a></li>
-                    <li><a><img src="assets/image/file-txt.png"/></a></li>
-                    <li><a><img src="assets/image/file-txt.png"/></a></li>
-                    <li><a><img src="assets/image/file-txt.png"/></a></li>
-                </ul>
-                <button>Conozca la Iniciativa</button>
+            <div class="col-md-5">
+              <ul class="thumbnail-detail-container__detaild-items">
+                <li>
+                  <b>Responsable sub iniciativa: </b>{{ detail.responsable }}
+                </li>
+                <li><b>Estado: </b>{{ detail.state }}</li>
+                <li><b>Impacto: </b>{{ detail.impact }}</li>
+                <li><b>Alcance: </b>{{ detail.scope }}</li>
+              </ul>
             </div>
+          </div>
         </div>
+        <div class="col-md-4">
+          <h3>Archivos disponibles</h3>
+          <ul class="thumbnail-detail-container__icon-file">
+            <li>
+              <a><img src="assets/image/file-txt.png" /></a>
+            </li>
+            <li>
+              <a><img src="assets/image/file-txt.png" /></a>
+            </li>
+            <li>
+              <a><img src="assets/image/file-txt.png" /></a>
+            </li>
+            <li>
+              <a><img src="assets/image/file-txt.png" /></a>
+            </li>
+            <li>
+              <a><img src="assets/image/file-txt.png" /></a>
+            </li>
+          </ul>
+          <button>Conozca la Iniciativa</button>
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 </div>

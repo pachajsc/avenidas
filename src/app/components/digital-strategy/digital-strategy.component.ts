@@ -17,9 +17,10 @@ export class DigitalStrategyComponent implements OnInit {
   handleGotoSubIniciative(iniciative, avenida) {
     let subInicitive: any = {
       iniciative,
-      avenida,
+      avenida: avenida,
+      path: `${avenida.path}/${iniciative.path}`,
     };
     this.store.dispatch(new SetIniciatives(subInicitive));
-    this.router.navigate(['/subiniciative']);
+    this.router.navigate([`${avenida.path}/${iniciative.path}`]);
   }
 }

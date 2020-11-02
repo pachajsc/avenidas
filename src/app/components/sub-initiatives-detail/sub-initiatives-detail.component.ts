@@ -13,13 +13,18 @@ export class SubInitiativesDetailComponent implements OnInit {
   @Select(AvenuesState.selectedSubIniciatives)
   subIniciativesDetail$: Observable<any>;
   detail: any = {};
-  avenuePath:string =''
+  avenuePath: string = '';
+  volverPath: any = '';
 
   ngOnInit(): void {
     this.subIniciativesDetail$.subscribe((res) => {
       this.detail = res.detail;
       this.avenuePath = `${res.avenuePath}`;
-
+      this.volverPath = [`/${res.path}`];
     });
+  }
+
+  toLink(url: string) {
+    return url;
   }
 }
