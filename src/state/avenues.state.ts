@@ -19,6 +19,7 @@ export class AvenuesStateModel {
   public itemsAvenues: any;
   public avenues: any;
   public language: string;
+  public textsMock:any;
 }
 
 @State<AvenuesStateModel>({
@@ -29,6 +30,28 @@ export class AvenuesStateModel {
     itemsAvenues: { es: {}, pt: {} },
     avenues: { es: [], pt: [] },
     language: lang.length > 0 ? lang[0] : 'pt',
+    textsMock: {
+      es: {
+        textInitHero: 'Descubre las...',
+        titleHero: 'Avenidas Estratégicas de Sistemas',
+        descriptionHero:
+          'En este portal podrás encontrar toda la información correspondiente a las iniciativas que se desprenden de los objetivos que tiene la Gerencia Corporativa de Sistemas.',
+        textButtonHero: 'Quiero conocer las Avenidas',
+        titleSectionAvenues: 'Nuestras Avenidas',
+        infoSectionAvenues:
+          'El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.',
+      },
+      pt: {
+        textInitHero: 'Descubra o ...',
+        titleHero: 'Avenidas Estratégicas de Sistemas',
+        descriptionHero:
+          'Neste portal encontrará toda a informação correspondente às iniciativas que decorrem dos objetivos da Gestão de Sistemas Corporativos.',
+        textButtonHero: 'Quero conhecer as avenidas',
+        titleSectionAvenues: 'Nossas avenidas',
+        infoSectionAvenues:
+          'O portal é composto por <b>6</b> objetivos denominados avenidas, dos quais emergem <b>15</b> iniciativas-chave e <b>76</b> sub-iniciativas.',
+      },
+    },
   },
 })
 @Injectable()
@@ -50,6 +73,11 @@ export class AvenuesState {
   @Selector()
   public static getLanguage({ language }: AvenuesStateModel): string {
     return language;
+  }
+
+  @Selector()
+  public static getTextsMock({ textsMock }: AvenuesStateModel): any {
+    return textsMock;
   }
 
   @Selector()

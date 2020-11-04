@@ -5,7 +5,7 @@ import { Select, Store } from '@ngxs/store';
 import { GetAvenues, SetLanguage } from './../../../state/avenues.actions';
 import { AvenuesState } from '../../../state/avenues.state';
 import { Observable } from 'rxjs';
-import {itemsAvenidas} from '../../utils'
+import { itemsAvenidas } from '../../utils';
 
 @Component({
   selector: 'app-home',
@@ -18,23 +18,25 @@ export class HomeComponent implements OnInit {
   @Select(AvenuesState.getItemsAvenues) itemsAvenidas$: Observable<any>;
   @Select(AvenuesState.getAvenues) avenues$: Observable<any>;
   @Select(AvenuesState.getLanguage) stateLanguage$: Observable<string>;
+  @Select(AvenuesState.getTextsMock) textsMock$: Observable<any>;
 
   avenidas: IAvenidas[] = [];
   itemsAvenidas: any = itemsAvenidas;
   language: string = '';
+  textMock: any = {};
 
   ngOnInit() {
     try {
       this.store.dispatch(new GetAvenues());
       this.stateLanguage$.subscribe((res) => (this.language = res));
       this.handleSelectLanguage(this.language);
+      this.render(this.language);
     } catch (error) {
       console.error(error);
     }
   }
 
-  handleSelectLanguage(language): void {
-    this.store.dispatch(new SetLanguage(language));
+  render(language: string) {
     this.itemsAvenidas$.subscribe(
       (itemsAvenidas) => (this.itemsAvenidas = itemsAvenidas[language]),
       (error) => {
@@ -47,9 +49,15 @@ export class HomeComponent implements OnInit {
         throw error;
       }
     );
+    this.textsMock$.subscribe((res) => (this.textMock = res[language]));
+  }
+
+  handleSelectLanguage(language): void {
+    this.store.dispatch(new SetLanguage(language));
   }
 
   selectLanguage(select: string) {
     this.handleSelectLanguage(select);
+    this.render(select);
   }
 }
