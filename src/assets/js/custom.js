@@ -4,6 +4,15 @@ $(document).ready(function(){
     $('.home-nav').removeClass('active-nav')
     $('.sticky-nav').addClass('active-nav')
   })
+  
+  $('.hero-content__lenguage a').click(function(){
+    $('a').removeClass('active')
+    $(this).addClass('active')
+  })  
+  $('.hero-content__lenguage a').click(function(){
+    $('a').removeClass('active')
+    $(this).addClass('active')
+  })  
 })
 
 

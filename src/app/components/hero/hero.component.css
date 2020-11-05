@@ -36,6 +36,9 @@
     cursor:pointer;
     font-size:14px;
 }
+.hero-content__lenguage li a.active{
+    color:#FF8F17;
+}
 .hero-content__title h1{
     width:370px;
     font-style: normal;
