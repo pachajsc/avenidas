@@ -42,7 +42,19 @@ export class AvenuesStateModel {
         titleSectionAvenues: 'Nuestras Avenidas',
         infoSectionAvenues:
           'El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.',
-        buttonBack:'Volver'
+        buttonBack:'Volver',
+        newITModel:'Nuevo Modelo TI',
+        newITModelDescription:'description',
+        cybersecurity:'Customer Centricity',
+        cybersecurityDescription:'description',
+        technologyStrategy:'Estratégia Tecnológica',
+        technologyStrategyDescription:'description',
+        talentManagement:'Gestión Talento',
+        talentManagementDescription:'description',
+        digitalStrategy:'Estrategia Digital',
+        digitalStrategyDescription:'description',
+        centricityConsumer:'Custumer Centricity',
+        centricityConsumerDescription:'description',
       },
       pt: {
         textInitHero: 'Descobri-las…',
@@ -55,7 +67,19 @@ export class AvenuesStateModel {
         titleSectionAvenues: 'Nossas avenidas',
         infoSectionAvenues:
           'O portal é composto por <b>6</b> objetivos denominados avenidas, dos quais emergem <b>15</b> iniciativas-chave e <b>76</b> sub-iniciativas.',
-          buttonBack:'Voltar'
+        buttonBack:'Voltar',
+        newITModel:'Nuevo Modelo TI',
+        newITModelDescription:'description',
+        cybersecurity:'Centrado no cliente',
+        cybersecurityDescription:'description',
+        technologyStrategy:'Estratégia Tecnológica',
+        technologyStrategyDescription:'description',
+        talentManagement:'Gestão de Talentos',
+        talentManagementDescription:'description',
+        digitalStrategy:'Estratégia Digital',
+        digitalStrategyDescription:'description',
+        centricityConsumer:'Centricidade do cliente',
+        centricityConsumerDescription:'description'
       },
     },
   },
