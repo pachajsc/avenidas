@@ -4,6 +4,12 @@ $(document).ready(function(){
     $('.home-nav').removeClass('active-nav')
     $('.sticky-nav').addClass('active-nav')
   })
+
+  if ( $("#navStickyId").length ) {
+    $('.nav-content').addClass('stickyNav')
+    $('.home-nav').removeClass('active-nav')
+    $('.sticky-nav').addClass('active-nav')
+  }
   
   $('.hero-content__lenguage a').click(function(){
     $('a').removeClass('active')
@@ -17,6 +23,7 @@ $(document).ready(function(){
 
 
 function onInit() {
+  
   //scroll smooth
   const links = document.querySelectorAll(".scroll-smooth");
   

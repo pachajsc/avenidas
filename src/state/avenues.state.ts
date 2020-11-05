@@ -37,19 +37,25 @@ export class AvenuesStateModel {
         descriptionHero:
           'En este portal podrás encontrar toda la información correspondiente a las iniciativas que se desprenden de los objetivos que tiene la Gerencia Corporativa de Sistemas.',
         textButtonHero: 'Quiero conocer las Avenidas',
+        linkEs:'Portugués',
+        linkPt:'Español',
         titleSectionAvenues: 'Nuestras Avenidas',
         infoSectionAvenues:
           'El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.',
+        buttonBack:'Volver'
       },
       pt: {
-        textInitHero: 'Descubra o ...',
+        textInitHero: 'Descobri-las…',
         titleHero: 'Avenidas Estratégicas de Sistemas',
         descriptionHero:
           'Neste portal encontrará toda a informação correspondente às iniciativas que decorrem dos objetivos da Gestão de Sistemas Corporativos.',
         textButtonHero: 'Quero conhecer as avenidas',
+        linkEs:'Português',
+        linkPt:'Espanhol',
         titleSectionAvenues: 'Nossas avenidas',
         infoSectionAvenues:
           'O portal é composto por <b>6</b> objetivos denominados avenidas, dos quais emergem <b>15</b> iniciativas-chave e <b>76</b> sub-iniciativas.',
+          buttonBack:'Voltar'
       },
     },
   },
