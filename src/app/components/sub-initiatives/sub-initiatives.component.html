@@ -3,6 +3,7 @@
   <div id="top"></div>
   <div id="navStickyId"></div>
   <div class="thumbnail-container">
+    <div *ngIf="!loading" class="wrapper-content">loading...</div>
     <div *ngIf="loading" class="wrapper-content">
       <!--bredcrum-->
       <div class="bredcrum-bar-content">
