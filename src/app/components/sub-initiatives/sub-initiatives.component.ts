@@ -3,6 +3,7 @@ import { DOCUMENT } from '@angular/common';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Select, Store } from '@ngxs/store';
 import { AvenuesState } from '../../../state/avenues.state';
+import { HelperService } from '../../services';
 import {
   GetAvenues,
   SetIniciatives,
@@ -21,6 +22,7 @@ export class SubInitiativesComponent implements OnInit {
     private store: Store,
     private router: Router,
     private route: ActivatedRoute,
+    private helper: HelperService,
     @Inject(DOCUMENT) private document: Document
   ) {}
 
@@ -33,10 +35,13 @@ export class SubInitiativesComponent implements OnInit {
   loading: boolean = false;
   params: any = {};
   language: string = '';
+  textMock: any = {};
 
   @Select(AvenuesState.selectedIniciatives) subIniciatives$: Observable<any[]>;
   @Select(AvenuesState.getItemsAvenues) itemsAvenidas$: Observable<any>;
   @Select(AvenuesState.getAvenues) avenues$: Observable<any>;
+  @Select(AvenuesState.getLanguage) stateLanguage$: Observable<string>;
+  @Select(AvenuesState.getTextsMock) textsMock$: Observable<any>;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((res: any) => {
@@ -64,6 +69,8 @@ export class SubInitiativesComponent implements OnInit {
   }
 
   render() {
+    this.stateLanguage$.subscribe((res) => (this.language = res));
+    this.textsMock$.subscribe((res) => (this.textMock = res[this.language]));
     this.subIniciatives$.subscribe((res: any) => {
       if (!res) {
         this.reload();
@@ -77,13 +84,13 @@ export class SubInitiativesComponent implements OnInit {
           for (let sub of res.iniciative.subIniciativas) {
             let model = {
               ...sub,
-              src: `assets/image/img-thumbnails/${sub.image}`,
+              src: sub.image,
             };
             subIniciativas.push(model);
           }
         }
         this.subIniciatives = subIniciativas;
-        this.avenuePath = `Avenidas Estratégicas / ${res.avenida.title}`;
+        this.avenuePath = `.../ ${res.avenida.title}`;
         this.document.title = `Avenidas Estratégicas | ${res.avenida.title} | ${res.iniciative.title}`;
         this.loading = true;
       }
@@ -95,23 +102,22 @@ export class SubInitiativesComponent implements OnInit {
     this.avenues$.subscribe((res) => {
       let language = null;
       res['es'].map((es) => {
-        if (es.path === this.params.avenue) 
+        if (es.path === this.params.avenue)
           es.iniciativas.map((i) => {
-            if (i.path === this.params.iniciative) 
-              language = 'es';
+            if (i.path === this.params.iniciative) language = 'es';
           });
       });
       if (!language) {
         res['pt'].map((pt) => {
-          if (pt.path === this.params.avenue) 
+          if (pt.path === this.params.avenue)
             pt.iniciativas.map((p) => {
-              if (p.path === this.params.iniciative) 
-                language = 'pt';
+              if (p.path === this.params.iniciative) language = 'pt';
             });
         });
       }
       if (language) {
         this.store.dispatch(new SetLanguage(language));
+        this.helper.changeLenguage(true)
         this.itemsAvenidas$.subscribe(
           (avenues) => {
             Object.values(avenues[language]).map((value: any) => {

@@ -9,6 +9,7 @@ import { DOCUMENT } from '@angular/common';
 })
 export class AppComponent implements OnInit {
   constructor(@Inject(DOCUMENT) private document: Document) {}
+
   ngOnInit() {
     const lang = navigator.languages.filter(
       (lang) => lang === 'es' || lang === 'pt'

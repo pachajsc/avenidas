@@ -12,9 +12,12 @@ import { Store } from '@ngxs/store';
 export class DigitalStrategyComponent implements OnInit {
   constructor(private router: Router, private store: Store) {}
   @Input() avenida: IAvenidas;
+  @Input() textMock: any;
+
   ngOnInit(): void {}
 
   handleGotoSubIniciative(iniciative, avenida) {
+    avenida = { ...avenida, title: this.textMock.title };
     let subInicitive: any = {
       iniciative,
       avenida: avenida,

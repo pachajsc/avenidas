@@ -1,3 +1,4 @@
+<!-- <app-nav [textMock]="textMock"></app-nav> -->
 <div class="animate__animated animate__fadeIn">
   <!--thumbnail detail-->
   <div id="top"></div>
@@ -12,7 +13,7 @@
           </div>
           <div class="bredcrum-bar-content__right">
             <a [routerLink]="toLink(volverPath)">
-              <img src="assets/image/arrow-left.png" alt="arrow" />buttonBack</a
+              <img src="assets/image/arrow-left.png" alt="arrow" />{{textMock.buttonBack}}</a
             >
           </div>
         </div>
@@ -44,10 +45,10 @@
           <h3>Archivos disponibles</h3>
           <ul class="thumbnail-detail-container__icon-file" >
             <li *ngFor="let item of detail.files">
-              <a href="{{ item.src }}" download><img src="{{ item.src }}" /></a>
+              <a href="{{ item.path }}" download><img src="{{ item.src }}" /></a>
             </li>
           </ul>
-          <button onclick="javascript:window.open('http://www.facebook.com', '_blank');">Conozca la Iniciativa</button>
+          <button (click)="link(detail.url)">Conozca la Iniciativa</button>
         </div>
       </div>
     </div>

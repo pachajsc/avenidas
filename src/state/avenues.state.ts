@@ -9,7 +9,7 @@ import {
 import { MockAvenidasService } from '../app/services/mock-avenidas.service';
 import { navHref, itemsAvenidas } from '../app/utils/';
 
-const lang= navigator.languages.filter(
+const lang = navigator.languages.filter(
   (lang) => lang === 'es' || lang === 'pt'
 );
 
@@ -19,7 +19,7 @@ export class AvenuesStateModel {
   public itemsAvenues: any;
   public avenues: any;
   public language: string;
-  public textsMock:any;
+  public textsMock: any;
 }
 
 @State<AvenuesStateModel>({
@@ -37,24 +37,41 @@ export class AvenuesStateModel {
         descriptionHero:
           'En este portal podrás encontrar toda la información correspondiente a las iniciativas que se desprenden de los objetivos que tiene la Gerencia Corporativa de Sistemas.',
         textButtonHero: 'Quiero conocer las Avenidas',
-        linkEs:'Portugués',
-        linkPt:'Español',
+        linkEs: 'Portugués',
+        linkPt: 'Español',
         titleSectionAvenues: 'Nuestras Avenidas',
-        infoSectionAvenues:
-          'El portal esta compuesto por <b>6</b> objetivos llamados avenidas, de las cuales se desprenden <b>15</b> iniciativas clave y <b>76</b> sub-iniciativas.',
-        buttonBack:'Volver',
-        newITModel:'Nuevo Modelo TI',
-        newITModelDescription:'description',
-        cybersecurity:'Customer Centricity',
-        cybersecurityDescription:'description',
-        technologyStrategy:'Estratégia Tecnológica',
-        technologyStrategyDescription:'description',
-        talentManagement:'Gestión Talento',
-        talentManagementDescription:'description',
-        digitalStrategy:'Estrategia Digital',
-        digitalStrategyDescription:'description',
-        centricityConsumer:'Custumer Centricity',
-        centricityConsumerDescription:'description',
+        infoSectionAvenues:'',
+        buttonBack: 'Volver',
+        newITModel: {
+          title: 'Nuevo Modelo TI',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        cybersecurity: {
+          title: 'Cyberseguridad y Compliance',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        technologyStrategy: {
+          title: 'Estratégia Tecnológica',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        talentManagement: {
+          title: 'Gestión Talento',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        digitalStrategy: {
+          title: 'Estrategia Digital',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        centricityConsumer: {
+          title: 'Custumer Centricity',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
       },
       pt: {
         textInitHero: 'Descobri-las…',
@@ -62,24 +79,43 @@ export class AvenuesStateModel {
         descriptionHero:
           'Neste portal encontrará toda a informação correspondente às iniciativas que decorrem dos objetivos da Gestão de Sistemas Corporativos.',
         textButtonHero: 'Quero conhecer as avenidas',
-        linkEs:'Português',
-        linkPt:'Espanhol',
+        linkEs: 'Português',
+        linkPt: 'Espanhol',
         titleSectionAvenues: 'Nossas avenidas',
-        infoSectionAvenues:
-          'O portal é composto por <b>6</b> objetivos denominados avenidas, dos quais emergem <b>15</b> iniciativas-chave e <b>76</b> sub-iniciativas.',
-        buttonBack:'Voltar',
-        newITModel:'Nuevo Modelo TI',
-        newITModelDescription:'description',
-        cybersecurity:'Centrado no cliente',
-        cybersecurityDescription:'description',
-        technologyStrategy:'Estratégia Tecnológica',
-        technologyStrategyDescription:'description',
-        talentManagement:'Gestão de Talentos',
-        talentManagementDescription:'description',
-        digitalStrategy:'Estratégia Digital',
-        digitalStrategyDescription:'description',
-        centricityConsumer:'Centricidade do cliente',
-        centricityConsumerDescription:'description'
+        infoSectionAvenues:'',
+        buttonBack: 'Voltar',
+        newITModel: {
+          title: 'Novo Modelo de TI',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+
+        cybersecurity: {
+          title: 'Centrado no cliente',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        technologyStrategy: {
+          title: 'Estratégia Tecnológica',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        talentManagement: {
+          title: 'Gestão de Talentos',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        digitalStrategy: {
+          title: 'Estratégia Digital',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+
+        centricityConsumer: {
+          title: 'Centricidade do cliente',
+          description:
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
       },
     },
   },
@@ -126,13 +162,20 @@ export class AvenuesState {
 
   @Action(GetAvenues)
   getAvenues({ getState, setState }: StateContext<AvenuesStateModel>) {
+   
+   //console.log(state);
+
     try {
       this.mockAvenidas.getAvenidas().subscribe(
         (res) => {
           let avenuesEs = [];
           let avenuesPt = [];
-
+          let totalAvenues = res.result.totalAvenues;
+          let totalIniciatives = 0;
+          let totalSubIniciatives = 0;
+          
           for (const [index, value] of res.result.avenues.entries()) {
+            totalIniciatives += value.totalIniciatives;
             let modelAvenuesEs = {
               title: value.name,
               src: `assets/image/icono-avenidas-${index + 1}.png`,
@@ -140,6 +183,7 @@ export class AvenuesState {
               href: navHref.find((e) => e.id === index + 1).href,
               path: value.path,
               iniciativas: value.iniciatives.map((value) => {
+                totalSubIniciatives += value.totalSubiniciatives;
                 return {
                   title: value.language.es.name,
                   href: navHref.find((e) => e.id === index + 1).href,
@@ -158,13 +202,14 @@ export class AvenuesState {
                             scope: sub.language.es.scope,
                             files: sub.files,
                             path: sub.language.es.path,
+                            url: sub.url,
                           };
                         })
                       : [],
                 };
               }),
             };
-
+           
             let modelAvenuesPt = {
               title: value.name,
               src: `assets/image/icono-avenidas-${index + 1}.png`,
@@ -190,6 +235,7 @@ export class AvenuesState {
                             scope: sub.language.pt.scope,
                             files: sub.files,
                             path: sub.language.pt.path,
+                            url: sub.url,
                           };
                         })
                       : [],
@@ -217,8 +263,12 @@ export class AvenuesState {
             };
             avenuesEs.push(modelAvenuesEs);
             avenuesPt.push(modelAvenuesPt);
+            
+            
           }
-
+          let infoSectionAvenuesPt = `O portal é composto por <b>${totalAvenues}</b> objetivos denominados avenidas, dos quais emergem <b>${totalIniciatives}</b> iniciativas-chave e <b>${totalSubIniciatives}</b> sub-iniciativas.`;
+          let infoSectionAvenuesEs = `El portal esta compuesto por <b>${totalAvenues}</b> objetivos llamados avenidas, de las cuales se desprenden <b>${totalIniciatives}</b> iniciativas clave y <b>${totalSubIniciatives}</b> sub-iniciativas.`;
+        
           const state = getState();
           setState({
             ...state,
@@ -226,6 +276,17 @@ export class AvenuesState {
               ...state.avenues,
               es: avenuesEs,
               pt: avenuesPt,
+            },
+            textsMock: {
+              ...state.textsMock,
+              es: {
+                ...state.textsMock.es,
+                infoSectionAvenues: infoSectionAvenuesEs,
+              },
+              pt: {
+                ...state.textsMock.pt,
+                infoSectionAvenues: infoSectionAvenuesPt,
+              },
             },
             itemsAvenues: this.itemsAvenidas,
           });

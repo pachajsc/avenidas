@@ -20,6 +20,7 @@ import { TechnologicalStrategyComponent } from './components/technological-strat
 import { TalentManagementComponent } from './components/talent-management/talent-management.component';
 import { NewITModelComponent } from './components/new-itmodel/new-itmodel.component';
 import { AvenuesState } from '../state/avenues.state';
+import {HelperService} from './services/index'
 
 @NgModule({
   declarations: [
@@ -45,7 +46,7 @@ import { AvenuesState } from '../state/avenues.state';
       developmentMode: !environment.production,
     }),
   ],
-  providers: [],
+  providers: [HelperService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
