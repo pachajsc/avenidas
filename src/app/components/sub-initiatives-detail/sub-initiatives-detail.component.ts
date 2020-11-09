@@ -37,6 +37,7 @@ export class SubInitiativesDetailComponent implements OnInit {
   params: any = {};
   language: string = '';
   textMock: any = {};
+  textDetail:any={}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((res: any) => {
@@ -59,7 +60,11 @@ export class SubInitiativesDetailComponent implements OnInit {
 
   render() {
     this.stateLanguage$.subscribe((res) => (this.language = res));
-    this.textsMock$.subscribe((res) => (this.textMock = res[this.language]));
+    this.textsMock$.subscribe((res) => {
+      this.textMock = res[this.language]
+      this.textDetail = this.textMock.detailTextSubIniciatives;
+    
+    });
     this.subIniciativesDetail$.subscribe((res) => {
       if (!res) {
         this.reload();

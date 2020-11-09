@@ -40,7 +40,7 @@ export class AvenuesStateModel {
         linkEs: 'Portugués',
         linkPt: 'Español',
         titleSectionAvenues: 'Nuestras Avenidas',
-        infoSectionAvenues:'',
+        infoSectionAvenues: '',
         buttonBack: 'Volver',
         newITModel: {
           title: 'Nuevo Modelo TI',
@@ -72,6 +72,17 @@ export class AvenuesStateModel {
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
         },
+        detailTextSubIniciatives: {
+          titleFile: 'Archivos disponibles',
+          buttonText: 'Conozca la Iniciativa',
+          responsable: 'Responsable sub iniciativa',
+          state: 'Estado',
+          impact: 'Impacto',
+          scope: 'Alcance',
+          country: 'País',
+          businessUnit: 'Unidad de negocio',
+          flag: 'Bandera',
+        },
       },
       pt: {
         textInitHero: 'Descobri-las…',
@@ -82,7 +93,7 @@ export class AvenuesStateModel {
         linkEs: 'Português',
         linkPt: 'Espanhol',
         titleSectionAvenues: 'Nossas avenidas',
-        infoSectionAvenues:'',
+        infoSectionAvenues: '',
         buttonBack: 'Voltar',
         newITModel: {
           title: 'Novo Modelo de TI',
@@ -115,6 +126,17 @@ export class AvenuesStateModel {
           title: 'Centricidade do cliente',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+        },
+        detailTextSubIniciatives: {
+          titleFile: 'Arquivos disponíveis',
+          buttonText: 'Conheça a Iniciativa',
+          responsable: 'Chefe da sub-iniciativa',
+          state: 'Estado',
+          impact: 'Impacto',
+          scope: 'Escopo',
+          country: 'País',
+          businessUnit: 'Unidade de negócio',
+          flag: 'Bandeira',
         },
       },
     },
@@ -162,8 +184,7 @@ export class AvenuesState {
 
   @Action(GetAvenues)
   getAvenues({ getState, setState }: StateContext<AvenuesStateModel>) {
-   
-   //console.log(state);
+    //console.log(state);
 
     try {
       this.mockAvenidas.getAvenidas().subscribe(
@@ -173,7 +194,7 @@ export class AvenuesState {
           let totalAvenues = res.result.totalAvenues;
           let totalIniciatives = 0;
           let totalSubIniciatives = 0;
-          
+
           for (const [index, value] of res.result.avenues.entries()) {
             totalIniciatives += value.totalIniciatives;
             let modelAvenuesEs = {
@@ -194,12 +215,17 @@ export class AvenuesState {
                       ? value.subIniciatives.map((sub) => {
                           return {
                             title: sub.language.es.name,
-                            image: sub.imagen,
+                            image: sub.imagen
+                              ? sub.imagen
+                              : 'assets/image/empty_image.jpg',
                             description: sub.language.es.description,
                             responsable: sub.language.es.responsable,
                             state: sub.language.es.state,
                             impact: sub.language.es.impact,
                             scope: sub.language.es.scope,
+                            country: sub.language.es.country,
+                            businessUnit: sub.language.es.businessUnit,
+                            flag: sub.language.es.flag,
                             files: sub.files,
                             path: sub.language.es.path,
                             url: sub.url,
@@ -209,7 +235,7 @@ export class AvenuesState {
                 };
               }),
             };
-           
+
             let modelAvenuesPt = {
               title: value.name,
               src: `assets/image/icono-avenidas-${index + 1}.png`,
@@ -227,12 +253,17 @@ export class AvenuesState {
                       ? value.subIniciatives.map((sub) => {
                           return {
                             title: sub.language.pt.name,
-                            image: sub.imagen,
+                            image: sub.imagen
+                              ? sub.imagen
+                              : 'assets/image/empty_image.jpg',
                             description: sub.language.pt.description,
                             responsable: sub.language.pt.responsable,
                             state: sub.language.pt.state,
                             impact: sub.language.pt.impact,
                             scope: sub.language.pt.scope,
+                            country: sub.language.pt.country,
+                            businessUnit: sub.language.pt.businessUnit,
+                            flag: sub.language.pt.flag,
                             files: sub.files,
                             path: sub.language.pt.path,
                             url: sub.url,
@@ -263,12 +294,10 @@ export class AvenuesState {
             };
             avenuesEs.push(modelAvenuesEs);
             avenuesPt.push(modelAvenuesPt);
-            
-            
           }
           let infoSectionAvenuesPt = `O portal é composto por <b>${totalAvenues}</b> objetivos denominados avenidas, dos quais emergem <b>${totalIniciatives}</b> iniciativas-chave e <b>${totalSubIniciatives}</b> sub-iniciativas.`;
           let infoSectionAvenuesEs = `El portal esta compuesto por <b>${totalAvenues}</b> objetivos llamados avenidas, de las cuales se desprenden <b>${totalIniciatives}</b> iniciativas clave y <b>${totalSubIniciatives}</b> sub-iniciativas.`;
-        
+
           const state = getState();
           setState({
             ...state,
