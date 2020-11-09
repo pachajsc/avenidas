@@ -19,14 +19,15 @@ export class HomeComponent implements OnInit {
   @Select(AvenuesState.getAvenues) avenues$: Observable<any>;
   @Select(AvenuesState.getLanguage) stateLanguage$: Observable<string>;
   @Select(AvenuesState.getTextsMock) textsMock$: Observable<any>;
+  @Select(AvenuesState.getPaths) paths$: Observable<any>;
 
   avenidas: IAvenidas[] = [];
   itemsAvenidas: any = itemsAvenidas;
   language: string = '';
   textMock: any = {};
+  paths:any={}
 
   ngOnInit() {
-
     try {
       this.store.dispatch(new GetAvenues());
       this.stateLanguage$.subscribe((res) => (this.language = res));
@@ -51,6 +52,7 @@ export class HomeComponent implements OnInit {
       }
     );
     this.textsMock$.subscribe((res) => (this.textMock = res[language]));
+    this.paths$.subscribe((res) => (this.paths = res[language]));
   }
 
   handleSelectLanguage(language): void {

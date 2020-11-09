@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-sm-2">
           <div class="listItems-section__title-items">
-            <a href="#Nuevo-Modelo-TI" class="scroll-smooth">
+            <a href="{{ paths.newITModel.href }}" class="scroll-smooth">
               <img
                 src="assets/image/icono-avenidas-1.png"
                 alt=""
@@ -34,7 +34,7 @@
         </div>
         <div class="col-sm-2">
           <div class="listItems-section__title-items">
-            <a href="#Cyberseguridad-y-Compliance" class="scroll-smooth">
+            <a href="{{ paths.cybersecurity.href }}" class="scroll-smooth">
               <img
                 src="assets/image/icono-avenidas-2.png"
                 alt=""
@@ -49,7 +49,7 @@
         </div>
         <div class="col-sm-2">
           <div class="listItems-section__title-items">
-            <a href="#Estrategia-Tecnologica" class="scroll-smooth">
+            <a href="{{ paths.technologyStrategy.href }}" class="scroll-smooth">
               <img
                 src="assets/image/icono-avenidas-3.png"
                 alt=""
@@ -64,7 +64,7 @@
         </div>
         <div class="col-sm-2">
           <div class="listItems-section__title-items">
-            <a href="#Gestion-de-Talento" class="scroll-smooth">
+            <a href="{{ paths.talentManagement.href }}" class="scroll-smooth">
               <img
                 src="assets/image/icono-avenidas-4.png"
                 alt=""
@@ -79,7 +79,7 @@
         </div>
         <div class="col-sm-2">
           <div class="listItems-section__title-items">
-            <a href="#Estrategia-Digital" class="scroll-smooth">
+            <a href="{{ paths.digitalStrategy.href }}" class="scroll-smooth">
               <img
                 src="assets/image/icono-avenidas-5.png"
                 alt=""
@@ -94,7 +94,7 @@
         </div>
         <div class="col-sm-2">
           <div class="listItems-section__title-items">
-            <a href="#Customer-Centricity" class="scroll-smooth">
+            <a href="{{ paths.centricityConsumer.href }}" class="scroll-smooth">
               <img
                 src="assets/image/icono-avenidas-6.png"
                 alt=""
@@ -113,6 +113,7 @@
   <!--list items section-->
 
   <!--section new-itmodel-->
+  <!-- <div id="Novo-Modelo-TI"></div> -->
   <section
     class="thumbnail-seccion-container color-orange"
     id="Nuevo-Modelo-TI"
@@ -125,6 +126,7 @@
   <!--section new-itmodel-->
 
   <!--section cybersecurity-compliance-->
+  <div id="Ciberseguranca-e-conformidade"></div>
   <section class="thumbnail-seccion-container" id="Cyberseguridad-y-Compliance">
     <app-cybersecurity-compliance
       [avenida]="itemsAvenidas.item2"
@@ -134,6 +136,7 @@
   <!--section cybersecurity-compliance-->
 
   <!--section technological-strategy-->
+  <div id="Estrategia-Tecnologia"></div>
   <section
     class="thumbnail-seccion-container color-blue"
     id="Estrategia-Tecnologica"
@@ -146,6 +149,7 @@
   <!--section  technological-strategy->
 
   <!--section talent-management-->
+  <div id="Gestao-de-Talentos"></div>
   <section
     class="thumbnail-seccion-container color-blue bkg-white"
     id="Gestion-de-Talento"
@@ -160,7 +164,6 @@
   <!--section digital-strategy-->
   <section
     class="thumbnail-seccion-container color-orange"
-    id="Gestion-de-Talento"
     id="Estrategia-Digital"
   >
     <app-digital-strategy
@@ -168,9 +171,11 @@
       [textMock]="textMock.digitalStrategy"
     ></app-digital-strategy>
   </section>
+  <div id="Estrategia-Digital"></div>
   <!--section digital-strategy-->
 
   <!--section customer-centricity-->
+  <div id="Centricidade-do-cliente"></div>
   <section class="thumbnail-seccion-container" id="Customer-Centricity">
     <app-customer-centricity
       [avenida]="itemsAvenidas.item1"

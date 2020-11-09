@@ -21,6 +21,7 @@ export class AvenuesStateModel {
   public avenues: any;
   public language: string;
   public textsMock: any;
+  public paths:any;
 }
 
 @State<AvenuesStateModel>({
@@ -31,6 +32,54 @@ export class AvenuesStateModel {
     itemsAvenues: { es: {}, pt: {} },
     avenues: { es: [], pt: [] },
     language: lang.length > 0 ? lang[0] : 'pt',
+    paths: {
+      es: {
+        newITModel: { href: '#Nuevo-Modelo-TI', id: 'Nuevo-Modelo-TI' },
+        cybersecurity: {
+          href: '#Cyberseguridad-y-Compliance',
+          id: 'Cyberseguridad-y-Compliance',
+        },
+        technologyStrategy: {
+          href: '#Estrategia-Tecnologica',
+          id: 'Estrategia-Tecnologica',
+        },
+        talentManagement: {
+          href: '#Gestion-de-Talento',
+          id: 'Gestion-de-Talento',
+        },
+        digitalStrategy: {
+          href: '#Estrategia-Digital',
+          id: 'Estrategia-Digital',
+        },
+        centricityConsumer: {
+          href: '#Customer-Centricity',
+          id: 'Customer-Centricity',
+        },
+      },
+      pt: {
+        newITModel: { href: '#Novo-Modelo-TI', id: 'Novo-Modelo-TI' },
+        cybersecurity: {
+          href: '#Ciberseguranca-e-conformidade',
+          id: 'Ciberseguranca-e-conformidade',
+        },
+        technologyStrategy: {
+          href: '#Estrategia-Tecnologia',
+          id: 'Estrategia-Tecnologia',
+        },
+        talentManagement: {
+          href: '#Gestao-de-Talentos',
+          id: 'Gestao-de-Talentos',
+        },
+        digitalStrategy: {
+          href: '#Estrategia-Digital',
+          id: 'Estrategia-Digital',
+        },
+        centricityConsumer: {
+          href: '#Centricidade-do-cliente',
+          id: 'Centricidade-do-cliente',
+        },
+      },
+    },
     textsMock: {
       es: {
         textInitHero: 'Descubre las...',
@@ -103,7 +152,7 @@ export class AvenuesStateModel {
         },
 
         cybersecurity: {
-          title: 'Centrado no cliente',
+          title: 'Cibersegurança  e  conformidade',
           description:
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
         },
@@ -173,6 +222,11 @@ export class AvenuesState {
   }
 
   @Selector()
+  public static getPaths({ paths }: AvenuesStateModel): any {
+    return paths;
+  }
+
+  @Selector()
   public static selectedIniciatives({
     selectedIniciatives,
   }: AvenuesStateModel): any[] {
@@ -188,9 +242,7 @@ export class AvenuesState {
 
   @Action(GetAvenues)
   getAvenues({ getState, setState }: StateContext<AvenuesStateModel>) {
-
     try {
-     
       this.service.getAvenidas().subscribe(
         (res) => {
           let avenuesEs = [];
@@ -205,13 +257,13 @@ export class AvenuesState {
               title: value.name,
               src: `assets/image/icono-avenidas-${index + 1}.png`,
               class: `circle-icon-${index + 1}`,
-              href: navHref.find((e) => e.id === index + 1).href,
+              href: navHref['es'].find((e) => e.id === index + 1).href,
               path: value.path,
               iniciativas: value.iniciatives.map((value) => {
                 totalSubIniciatives += value.totalSubiniciatives;
                 return {
                   title: value.language.es.name,
-                  href: navHref.find((e) => e.id === index + 1).href,
+                  href: navHref['es'].find((e) => e.id === index + 1).href,
                   path: value.language.es.path,
                   description: value.language.es.description,
                   subIniciativas:
@@ -244,12 +296,12 @@ export class AvenuesState {
               title: value.name,
               src: `assets/image/icono-avenidas-${index + 1}.png`,
               class: `circle-icon-${index + 1}`,
-              href: navHref.find((e) => e.id === index + 1).href,
+              href: navHref['pt'].find((e) => e.id === index + 1).href,
               path: value.path,
               iniciativas: value.iniciatives.map((value) => {
                 return {
                   title: value.language.pt.name,
-                  href: navHref.find((e) => e.id === index + 1).href,
+                  href: navHref['pt'].find((e) => e.id === index + 1).href,
                   path: value.language.pt.path,
                   description: value.language.pt.description,
                   subIniciativas:

@@ -13,11 +13,13 @@ export class NavComponent implements OnInit {
   constructor(private helper: HelperService) {}
   @Select(AvenuesState.getLanguage) stateLanguage$: Observable<string>;
   @Select(AvenuesState.getTextsMock) textsMock$: Observable<any>;
+  @Select(AvenuesState.getPaths) paths$: Observable<any>;
   @Input() stickyNav: string;
   textMock: any = {};
   language: string = '';
   displayNav: boolean = false;
   top = '#top';
+  paths:any={}
 
   ngOnInit() {
     this.changueLenguage();
@@ -29,6 +31,7 @@ export class NavComponent implements OnInit {
   changueLenguage() {
     this.stateLanguage$.subscribe((res) => (this.language = res));
     this.textsMock$.subscribe((res) => (this.textMock = res[this.language]));
+    this.paths$.subscribe((res) => (this.paths = res[this.language]));
     this.displayNav = true;
   }
 }
