@@ -8,6 +8,7 @@ import {
 } from './avenues.actions';
 import { MockAvenidasService } from '../app/services/mock-avenidas.service';
 import { navHref, itemsAvenidas } from '../app/utils/';
+import { AvenuesService } from '../app/services';
 
 const lang = navigator.languages.filter(
   (lang) => lang === 'es' || lang === 'pt'
@@ -144,7 +145,10 @@ export class AvenuesStateModel {
 })
 @Injectable()
 export class AvenuesState {
-  constructor(private readonly mockAvenidas: MockAvenidasService) {}
+  constructor(
+    private readonly mockAvenidas: MockAvenidasService,
+    private readonly service: AvenuesService
+  ) {}
 
   itemsAvenidas = { es: itemsAvenidas, pt: itemsAvenidas };
 
@@ -184,10 +188,10 @@ export class AvenuesState {
 
   @Action(GetAvenues)
   getAvenues({ getState, setState }: StateContext<AvenuesStateModel>) {
-    //console.log(state);
 
     try {
-      this.mockAvenidas.getAvenidas().subscribe(
+     
+      this.service.getAvenidas().subscribe(
         (res) => {
           let avenuesEs = [];
           let avenuesPt = [];

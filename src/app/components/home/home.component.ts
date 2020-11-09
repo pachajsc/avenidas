@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MockAvenidasService } from '../../services/mock-avenidas.service';
 import { IAvenidas } from '../../interfaces/avenidas';
 import { Select, Store } from '@ngxs/store';
 import { GetAvenues, SetLanguage } from './../../../state/avenues.actions';
@@ -7,11 +6,12 @@ import { AvenuesState } from '../../../state/avenues.state';
 import { Observable } from 'rxjs';
 import { itemsAvenidas } from '../../utils';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [MockAvenidasService],
+  providers: [],
 })
 export class HomeComponent implements OnInit {
   constructor(private store: Store) {}
@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
   textMock: any = {};
 
   ngOnInit() {
+
     try {
       this.store.dispatch(new GetAvenues());
       this.stateLanguage$.subscribe((res) => (this.language = res));
