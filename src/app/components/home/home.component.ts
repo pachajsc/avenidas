@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MockAvenidasService } from '../../services/mock-avenidas.service';
 import { IAvenidas } from '../../interfaces/avenidas';
 import { Select, Store } from '@ngxs/store';
 import { GetAvenues, SetLanguage } from './../../../state/avenues.actions';
@@ -7,11 +6,12 @@ import { AvenuesState } from '../../../state/avenues.state';
 import { Observable } from 'rxjs';
 import { itemsAvenidas } from '../../utils';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [MockAvenidasService],
+  providers: [],
 })
 export class HomeComponent implements OnInit {
   constructor(private store: Store) {}
@@ -19,11 +19,13 @@ export class HomeComponent implements OnInit {
   @Select(AvenuesState.getAvenues) avenues$: Observable<any>;
   @Select(AvenuesState.getLanguage) stateLanguage$: Observable<string>;
   @Select(AvenuesState.getTextsMock) textsMock$: Observable<any>;
+  @Select(AvenuesState.getPaths) paths$: Observable<any>;
 
   avenidas: IAvenidas[] = [];
   itemsAvenidas: any = itemsAvenidas;
   language: string = '';
   textMock: any = {};
+  paths:any={}
 
   ngOnInit() {
     try {
@@ -50,6 +52,7 @@ export class HomeComponent implements OnInit {
       }
     );
     this.textsMock$.subscribe((res) => (this.textMock = res[language]));
+    this.paths$.subscribe((res) => (this.paths = res[language]));
   }
 
   handleSelectLanguage(language): void {

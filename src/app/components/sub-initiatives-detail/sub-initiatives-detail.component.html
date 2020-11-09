@@ -1,3 +1,4 @@
+<!-- <app-nav [textMock]="textMock"></app-nav> -->
 <div class="animate__animated animate__fadeIn">
   <!--thumbnail detail-->
   <div id="top"></div>
@@ -12,7 +13,7 @@
           </div>
           <div class="bredcrum-bar-content__right">
             <a [routerLink]="toLink(volverPath)">
-              <img src="assets/image/arrow-left.png" alt="arrow" />buttonBack</a
+              <img src="assets/image/arrow-left.png" alt="arrow" />{{textMock.buttonBack}}</a
             >
           </div>
         </div>
@@ -31,23 +32,26 @@
             <div class="col-md-5">
               <ul class="thumbnail-detail-container__detaild-items">
                 <li>
-                  <b>Responsable sub iniciativa: </b>{{ detail.responsable }}
+                  <b>{{textDetail.responsable}}: </b>{{ detail.responsable }}
                 </li>
-                <li><b>Estado: </b>{{ detail.state }}</li>
-                <li><b>Impacto: </b>{{ detail.impact }}</li>
-                <li><b>Alcance: </b>{{ detail.scope }}</li>
+                <li><b>{{textDetail.state}}: </b>{{ detail.state }}</li>
+                <li><b>{{textDetail.impact}}: </b>{{ detail.impact }}</li>
+                <li><b>{{textDetail.scope}}: </b>{{ detail.scope }}</li>
+                <li><b>{{textDetail.country}}: </b>{{ detail.country }}</li>
+                <li><b>{{textDetail.businessUnit}}: </b>{{ detail.businessUnit }}</li>
+                <li><b>{{textDetail.flag}}: </b>{{ detail.flag }}</li>
               </ul>
             </div>
           </div>
         </div>
         <div class="col-md-4">
-          <h3>Archivos disponibles</h3>
+          <h3>{{textDetail.titleFile}}</h3>
           <ul class="thumbnail-detail-container__icon-file" >
             <li *ngFor="let item of detail.files">
-              <a href="{{ item.src }}" download><img src="{{ item.src }}" /></a>
+              <a href="{{ item.path }}" download><img src="{{ item.src }}" /></a>
             </li>
           </ul>
-          <button onclick="javascript:window.open('http://www.facebook.com', '_blank');">Conozca la Iniciativa</button>
+          <button (click)="link(detail.url)">{{textDetail.buttonText}}</button>
         </div>
       </div>
     </div>
