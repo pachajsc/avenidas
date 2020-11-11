@@ -95,32 +95,32 @@ export class AvenuesStateModel {
         newITModel: {
           title: 'Nuevo Modelo TI',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Convertir a la Gerencia de Sistemas en un área estratégica para Cencosud, teniendo una permanente Obsesión por nuestro cliente interno; y ser reconocidos como un referente que conoce e impulsa la innovación, permitiendo el crecimiento de los negocios a través de la combinación de personas, procesos y tecnologías, logrando de esta manera entregar un servicio de excelencia a nuestros clientes.',
         },
         cybersecurity: {
           title: 'Cyberseguridad y Compliance',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'En un contexto donde la transformación digital se ha acelerado (servicios cloud, mayor movilidad y trabajo colaborativo, omnicalidad, más analítica de datos, automatización de procesos, etc….), junto a un entorno de ciberamenazas creciente (ataques ransomware, robo de información sensible, fraudes, etc …) y un cada vez mas demandante panorama regulatorio/compliance (PCI DSS para Medios de Pago, LGPD para Datos Pesonales, DJSI para un Sustentabilidad, etc …..) hemos definido esta avenida del Programa de Ciberseguridad con distintas iniciativas para aumentar nuestras capas de seguridad & protección, tener mayor visibilidad para estar mas alertas y anticipar posibles ataques, desarrollar capacidades para responder a un incidente y cumplir con nuestras responsabilidades con clientes y organismos reguladores para reducir exposición a riesgos, sanciones legales, pérdidas operativas y/o daños a la reputación.',
         },
         technologyStrategy: {
           title: 'Estratégia Tecnológica',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Son las políticas, hojas de ruta, planes y acciones relacionadas con la toma de decisiones para la creación, difusión y uso de la tecnología, orientados a la eficiencia, competitividad y productividad de la compañía, con una visión de innovación y adaptación de la compañía a los futuros desafíos y nuevos negocios.',
         },
         talentManagement: {
           title: 'Gestión Talento',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Desarrollar la Gestión del Talentos, contando con una serie de procesos y estrategias que permitan Identificar y Atraer las personas claves para la gerencia de Sistemas, además de  Desarrollar, Reconocer y Retener a nuestras personas, desafiando de manera permanente el Status Quo; permitiendo que nuestros talentos desarrollen su ingenio y creatividad de manera libre y espontanea; y permitiéndoles conocer y trazar su desarrollo al interior de Cencosud. ',
         },
         digitalStrategy: {
           title: 'Estrategia Digital',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Son las acciones y decisiones necesarias para transformar la compañía a través la construcción y adopción de plataformas digitales con el objetivo de acelerar y eficientizar los procesos de la Cencosud siguiendo las tendencias y referentes del mercado. ',
         },
         centricityConsumer: {
           title: 'Custumer Centricity',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Definir, modelar y entregar Soluciones Tecnológicas de forma ágil y sustentable en las cuales se basen los procesos de negocio relacionados con el Cliente Final. Vemos al cliente en el corazón de todos los procesos de negocio y lo colocamos en el centro de todas nuestras decisiones y acciones. Buscamos conocer a nuestro cliente y entregarle experiencias diferenciales y personalizadas.',
         },
         detailTextSubIniciatives: {
           titleFile: 'Archivos disponibles',
@@ -148,34 +148,34 @@ export class AvenuesStateModel {
         newITModel: {
           title: 'Novo Modelo de TI',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Converter a Gestão de Sistemas em uma área estratégica para a Cencosud, tendo uma Obsessão permanente para o nosso cliente interno; e ser reconhecida como uma referência que conhece e impulsiona a inovação, permitindo o crescimento dos negócios através da combinação de pessoas, processos e tecnologias, conseguindo assim prestar um serviço de excelência aos nossos clientes.',
         },
 
         cybersecurity: {
           title: 'Cibersegurança  e  conformidade',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Em um contexto onde a transformação digital se acelerou (serviços em nuvem, maior mobilidade e trabalho colaborativo, onicalidade, mais análise de dados, automação de processos, etc ...), juntamente com um ambiente de ameaças cibernéticas crescente (ataques de ransomware, roubo de informações sensível, fraude, etc ...) e um cenário regulatório / de conformidade cada vez mais exigente (PCI DSS para Métodos de Pagamento, LGPD para Dados Pessoais, DJSI para Sustentabilidade, etc ... ..) Nós definimos esta via do Programa de Cibersegurança com diferentes Iniciativas para aumentar nossas camadas de segurança e proteção, ter maior visibilidade para estar mais alerta e antecipar possíveis ataques, desenvolver capacidades para responder a um incidente e cumprir nossas responsabilidades com clientes e órgãos reguladores para reduzir a exposição a riscos, sanções legais, perdas operacionais e / ou danos à reputação.',
         },
         technologyStrategy: {
           title: 'Estratégia Tecnológica',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'São as políticas, roadmaps, planos e ações relacionados à tomada de decisão para a criação, disseminação e uso de tecnologia, visando a eficiência, competitividade e produtividade da empresa, com uma visão de inovação e adaptação da empresa para desafios futuros e novos negócios.',
         },
         talentManagement: {
           title: 'Gestão de Talentos',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Desenvolver a Gestão de Talentos, contando com um conjunto de processos e estratégias que permitem Identificar e Atrair pessoas-chave para a gestão de Sistemas, além de Desenvolver, Reconhecer e Reter nossa gente, desafiando permanentemente o Status Quo; permitindo que nossos talentos desenvolvam sua engenhosidade e criatividade livre e espontaneamente; e permitindo que eles conheçam e rastreiem seu desenvolvimento dentro da Cencosud.',
         },
         digitalStrategy: {
           title: 'Estratégia Digital',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'São as ações e decisões necessárias para transformar a empresa por meio da construção e adoção de plataformas digitais com o objetivo de acelerar e tornar mais eficientes os processos do Cencosud, seguindo tendências e benchmarks de mercado.',
         },
 
         centricityConsumer: {
           title: 'Centricidade do cliente',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor',
+            'Definir, modelar e entregar Soluções Tecnológicas de forma ágil e sustentável em que se baseiam os processos de negócio relacionados ao Cliente Final. Vemos o cliente no centro de todos os processos de negócios e os colocamos no centro de todas as nossas decisões e ações. Buscamos conhecer nosso cliente e proporcionar-lhe experiências diferenciadas e personalizadas.',
         },
         detailTextSubIniciatives: {
           titleFile: 'Arquivos disponíveis',

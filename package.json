@@ -1,7 +1,6 @@
 {
   "name": "avenidas",
   "version": "0.0.0",
-  "homepage": "http://181.215.55.170/~cencosud/avenidas/test/",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -5,15 +5,28 @@
     
     <div class="col-md-6">
       <div class="thumbnail-seccion-container__data">
-          <h2 class="animate__animated animateFadeIn">{{ textMock.title }}</h2>
-        <p class="animate__animated animateFadeUp">
-          {{ textMock.description }}
-        </p>
-          <div class="thumbnail-seccion-container__action-buttons animate__animated align-left">
-          <button (click)="handleGotoSubIniciative(item, avenida)" *ngFor="let item of avenida.iniciativas">{{item.title}}</button>
-          </div>
+        <h2 class="animate__animated animateFadeIn">{{ textMock.title }}</h2>
+        <div class="content-mask">
+          <p class="animate__animated animateFadeUp">
+            <!-- {{ textMock.description }} -->
+            {{ textMock.description }}
+  
+          </p>
+       <div class="content-ver-mas a3">{{ textMock.description }}</div>
       </div>
-  </div>
+      <button class="ver-mas a3">ver más</button>
+        <div
+          class="thumbnail-seccion-container__action-buttons animate__animated align-left"
+        >
+          <button
+            (click)="handleGotoSubIniciative(item, avenida)"
+            *ngFor="let item of avenida.iniciativas"
+          >
+            {{ item.title }}
+          </button>
+        </div>
+      </div>
+    </div>
     <div class="col-md-6">
       <img src="assets/image/Cyberseguridad-y-Compliance/mancha.png" alt="mancha"
           class="thumbnail-seccion__image-1 animate__animated animaterubberBand" />

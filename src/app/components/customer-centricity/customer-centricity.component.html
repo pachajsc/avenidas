@@ -1,5 +1,4 @@
 <!--thumbnail section-->
-
 <div class="wrapper-content">
   <div class="row">
     <div class="col-md-6">
@@ -29,11 +28,17 @@
     <div class="col-md-6">
       <div class="thumbnail-seccion-container__data">
         <h2 class="animate__animated animateFadeIn">{{ textMock.title }}</h2>
+        <div class="content-mask">
         <p class="animate__animated animateFadeUp">
+          <!-- {{ textMock.description }} -->
           {{ textMock.description }}
+
         </p>
+       <div class="content-ver-mas a2">{{ textMock.description }}</div>
+      </div>
+      <button class="ver-mas a2">ver más</button>
         <div
-          class="thumbnail-seccion-container__action-buttons animate__animated align-right"
+          class="thumbnail-seccion-container__action-buttons animate__animated align-left"
         >
           <button
             (click)="handleGotoSubIniciative(item, avenida)"

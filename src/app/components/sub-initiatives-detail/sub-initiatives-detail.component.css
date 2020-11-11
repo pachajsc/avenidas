@@ -39,6 +39,7 @@
     border-radius: 12px;
     max-height:239px;
     position: relative;
+    box-shadow: 0 0 42px 5px #0000001a;
 }
 .thumbnail-detail-container__image-container img{
     width:100%;
@@ -50,7 +51,8 @@
 .thumbnail-detail-container__detaild-items li{
     font-style: normal;
     font-size: 14px;
-    line-height: 30px;
+    line-height: 20px;
+    margin-bottom: 6px;
     align-items: center;
     color: #000000;
 }

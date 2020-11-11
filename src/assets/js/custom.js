@@ -1,4 +1,5 @@
 $(document).ready(function(){
+
   $('.thumbnail-seccion-container__action-buttons').click(function(){
     $('.nav-content').addClass('stickyNav')
     $('.home-nav').removeClass('active-nav')
@@ -19,6 +20,37 @@ $(document).ready(function(){
     $('a').removeClass('active')
     $(this).addClass('active')
   })  
+
+
+  $('button.ver-mas.a1').click(function(){
+    $('.content-ver-mas.a1').fadeIn()
+    $('.background-outside').fadeIn()
+  })
+  $('button.ver-mas.a2').click(function(){
+    $('.content-ver-mas.a2').fadeIn()
+    $('.background-outside').fadeIn()
+  })
+  $('button.ver-mas.a3').click(function(){
+    $('.content-ver-mas.a3').fadeIn()
+    $('.background-outside').fadeIn()
+  })
+  $('button.ver-mas.a4').click(function(){
+    $('.content-ver-mas.a4').fadeIn()
+    $('.background-outside').fadeIn()
+  })
+  $('button.ver-mas.a5').click(function(){
+    $('.content-ver-mas.a5').fadeIn()
+    $('.background-outside').fadeIn()
+  })
+  $('button.ver-mas.a6').click(function(){
+    $('.content-ver-mas.a6').fadeIn()
+    $('.background-outside').fadeIn()
+  })
+  $('.background-outside').click(function(){
+    $('.content-ver-mas').fadeOut()
+    $(this).fadeOut()
+  })
+  
 })
 
 
@@ -189,6 +221,7 @@ loop();
 
   }, true)
 
+  
   
 }
 
