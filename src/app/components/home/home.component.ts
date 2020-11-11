@@ -6,7 +6,6 @@ import { AvenuesState } from '../../../state/avenues.state';
 import { Observable } from 'rxjs';
 import { itemsAvenidas } from '../../utils';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -25,12 +24,20 @@ export class HomeComponent implements OnInit {
   itemsAvenidas: any = itemsAvenidas;
   language: string = '';
   textMock: any = {};
-  paths:any={}
+  paths: any = {};
 
   ngOnInit() {
     try {
       this.store.dispatch(new GetAvenues());
       this.stateLanguage$.subscribe((res) => (this.language = res));
+      let lang = sessionStorage.getItem('lang');
+      if (lang) {
+        sessionStorage.setItem('lang', lang);
+        this.language = lang;
+      } else {
+        sessionStorage.setItem('lang', this.language);
+      }
+      
       this.handleSelectLanguage(this.language);
       this.render(this.language);
     } catch (error) {
@@ -56,6 +63,7 @@ export class HomeComponent implements OnInit {
   }
 
   handleSelectLanguage(language): void {
+    sessionStorage.setItem('lang', language);
     this.store.dispatch(new SetLanguage(language));
   }
 
