@@ -11,7 +11,6 @@ import {
 } from '../../../state/avenues.actions';
 import { Observable } from 'rxjs';
 
-
 @Component({
   selector: 'app-sub-initiatives-detail',
   templateUrl: './sub-initiatives-detail.component.html',
@@ -37,7 +36,8 @@ export class SubInitiativesDetailComponent implements OnInit {
   params: any = {};
   language: string = '';
   textMock: any = {};
-  textDetail:any={}
+  textDetail: any = {};
+  hiddenButton: boolean = false;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((res: any) => {
@@ -61,9 +61,8 @@ export class SubInitiativesDetailComponent implements OnInit {
   render() {
     this.stateLanguage$.subscribe((res) => (this.language = res));
     this.textsMock$.subscribe((res) => {
-      this.textMock = res[this.language]
+      this.textMock = res[this.language];
       this.textDetail = this.textMock.detailTextSubIniciatives;
-    
     });
     this.subIniciativesDetail$.subscribe((res) => {
       if (!res) {
@@ -80,6 +79,7 @@ export class SubInitiativesDetailComponent implements OnInit {
           }
         }
 
+        this.hiddenButton = !this.detail.url ? false : true;
         this.detail = { ...res.detail, files };
         this.avenuePath = `${res.avenuePath}`;
         this.volverPath = [`/${res.path}`];
