@@ -69,6 +69,7 @@
 }
 .thumbnail-detail-container__icon-file li img{
     position: relative;
+    width: 31px;
 }
 
 .thumbnail-detail-container button{

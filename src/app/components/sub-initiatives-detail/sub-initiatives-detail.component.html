@@ -48,7 +48,7 @@
           <h3>{{textDetail.titleFile}}</h3>
           <ul class="thumbnail-detail-container__icon-file" >
             <li *ngFor="let item of detail.files">
-              <a href="{{ item.path }}" download><img src="{{ item.src }}" /></a>
+              <a href="http://40.124.121.241:8001{{ item.path }}" download><img src="assets/image/icon-file.svg" /></a>
             </li>
           </ul>
           <button (click)="link(detail.url)">{{textDetail.buttonText}}</button>
