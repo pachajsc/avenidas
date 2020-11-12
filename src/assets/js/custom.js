@@ -55,7 +55,13 @@ $(document).ready(function(){
 
 
 function onInit() {
-  
+  var userLang = navigator.language || navigator.userLanguage; 
+   if(userLang === 'pt'){
+    $('.hero-content__lenguage a.pt').addClass('active')
+   }else{
+    $('.hero-content__lenguage a.es').addClass('active')
+   }
+
   //scroll smooth
   const links = document.querySelectorAll(".scroll-smooth");
   
@@ -85,7 +91,9 @@ function onInit() {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-
+      $('.bredcrum-bar-content__right').click(function(){
+        header.classList.add("sticky");
+      })
     if (scrollPosition > 1200) {
       header.classList.add("sticky");
     } else {
@@ -200,7 +208,8 @@ loop();
     }
     // Animate sectionl
     var scrollDistance = $(window).scrollTop();
-
+ 
+    
     $('.thumbnail-seccion-container__action-buttons').click(function () {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
     })

@@ -108,7 +108,7 @@ export class AvenuesStateModel {
             'Son las políticas, hojas de ruta, planes y acciones relacionadas con la toma de decisiones para la creación, difusión y uso de la tecnología, orientados a la eficiencia, competitividad y productividad de la compañía, con una visión de innovación y adaptación de la compañía a los futuros desafíos y nuevos negocios.',
         },
         talentManagement: {
-          title: 'Gestión Talento',
+          title: 'Gestión de Talento',
           description:
             'Desarrollar la Gestión del Talentos, contando con una serie de procesos y estrategias que permitan Identificar y Atraer las personas claves para la gerencia de Sistemas, además de  Desarrollar, Reconocer y Retener a nuestras personas, desafiando de manera permanente el Status Quo; permitiendo que nuestros talentos desarrollen su ingenio y creatividad de manera libre y espontanea; y permitiéndoles conocer y trazar su desarrollo al interior de Cencosud. ',
         },

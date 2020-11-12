@@ -97,23 +97,24 @@
 .thumbnail-seccion-container p{
     font-style: normal;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     letter-spacing: -0.0384615em;
     color: #000000;
     width: 300px;
     margin:5px 0 10px 0;
+    position:relative;
    
 }
 .thumbnail-seccion-container .content-mask{
-    height:62px;
+    height:63px;
     overflow:hidden;
 }
 .thumbnail-seccion-container button.ver-mas{
     width: 62px;
     height: 20px;
     border: navajowhite;
-    margin-top:5px;
+    margin-top:7px;
     position: relative;
 }
 .content-ver-mas{
@@ -121,19 +122,19 @@
     margin-top: -119px;
     border-radius: 6px;
     background: #fff;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 23px;
     z-index: 10;
     padding: 20px;
     box-shadow: 0 0 42px 5px #0000001a;
     display:none;
 }
-.content-ver-mas.a1{margin-top: -238px;}
-.content-ver-mas.a2{margin-top: -239px;}
-.content-ver-mas.a3{margin-top: -564px;}
-.content-ver-mas.a4{margin-top: -157px;}
-.content-ver-mas.a5{margin-top: -280px;}
-.content-ver-mas.a6{margin-top: -198px;}
+.content-ver-mas.a1{margin-top: -264px;}
+.content-ver-mas.a2{margin-top: -256px;}
+.content-ver-mas.a3{margin-top: -617px;}
+.content-ver-mas.a4{margin-top:-174px;}
+.content-ver-mas.a5{margin-top: -307px;}
+.content-ver-mas.a6{margin-top: -204px;}
 .background-outside{
     position:absolute;
     z-index:5;
@@ -143,7 +144,37 @@
     right:0;
     display:none;
 }
+.thumbnail-seccion-container .content-mask p::after{
+    position:absolute;
+    top:0;
+    right:0;
+    content:'...'
+}
 
+.thumbnail-seccion-container .content-mask.a1 p::after{
+    top: 37px;
+    right: -3px;
+}
+.thumbnail-seccion-container .content-mask.a2 p::after{
+    top: 36px;
+    right: -7px;
+}
+.thumbnail-seccion-container .content-mask.a3 p::after{
+    top: 37px;
+    right: -3px;
+}
+.thumbnail-seccion-container .content-mask.a4 p::after{
+    top: 37px;
+    right: -4px;
+}
+.thumbnail-seccion-container .content-mask.a5 p::after{
+    top: 37px;
+    right: 28px;
+}
+.thumbnail-seccion-container .content-mask.a6 p::after{
+    top: 37px;
+    right: -4px;
+}
 /*section component*/
 
 

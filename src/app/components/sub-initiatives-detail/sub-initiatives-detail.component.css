@@ -67,9 +67,13 @@
     margin: 7px 14px 0 0;
     
 }
+.thumbnail-detail-container__icon-file li img:hover{
+    opacity:1;
+}
 .thumbnail-detail-container__icon-file li img{
     position: relative;
     width: 31px;
+    opacity:0.7;
 }
 
 .thumbnail-detail-container button{
