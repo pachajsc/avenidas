@@ -1,5 +1,8 @@
-$(document).ready(function(){
 
+
+
+$(document).ready(function(){
+  
   $('.thumbnail-seccion-container__action-buttons').click(function(){
     $('.nav-content').addClass('stickyNav')
     $('.home-nav').removeClass('active-nav')
@@ -55,6 +58,7 @@ $(document).ready(function(){
 
 
 function onInit() {
+  
   var userLang = navigator.language || navigator.userLanguage; 
    if(userLang === 'pt'){
     $('.hero-content__lenguage a.pt').addClass('active')
@@ -91,11 +95,10 @@ function onInit() {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-      $('.bredcrum-bar-content__right').click(function(){
-        header.classList.add("sticky");
-      })
+     
     if (scrollPosition > 1200) {
       header.classList.add("sticky");
+     
     } else {
       header.classList.remove("sticky");
 
@@ -207,8 +210,8 @@ loop();
       );
     }
     // Animate sectionl
+    
     var scrollDistance = $(window).scrollTop();
- 
     
     $('.thumbnail-seccion-container__action-buttons').click(function () {
       document.body.scrollTop = document.documentElement.scrollTop = 0;
@@ -223,6 +226,7 @@ loop();
     // Assign active class to nav links while scolling
     $('.thumbnail-seccion-container').each(function (i) {
       if ($(this).position().top <= scrollDistance) {
+        
         $('.nav-content a.lk.active').removeClass('active');
         $('.nav-content a.lk').eq(i).addClass('active');
       }
@@ -230,9 +234,12 @@ loop();
 
   }, true)
 
-  
-  
+
+
 }
+
+
+  
 
 
 

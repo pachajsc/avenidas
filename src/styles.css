@@ -161,7 +161,7 @@
 }
 .thumbnail-seccion-container .content-mask.a3 p::after{
     top: 37px;
-    right: -3px;
+    right:8px;
 }
 .thumbnail-seccion-container .content-mask.a4 p::after{
     top: 37px;
@@ -174,6 +174,9 @@
 .thumbnail-seccion-container .content-mask.a6 p::after{
     top: 37px;
     right: -4px;
+}
+.thumbnail-seccion-container .content-mask.a2{
+    height:66px;
 }
 /*section component*/
 
