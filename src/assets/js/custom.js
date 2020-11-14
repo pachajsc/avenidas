@@ -1,8 +1,6 @@
 
-
-
 $(document).ready(function(){
-  
+
   $('.thumbnail-seccion-container__action-buttons').click(function(){
     $('.nav-content').addClass('stickyNav')
     $('.home-nav').removeClass('active-nav')
@@ -103,7 +101,7 @@ function onInit() {
       document.documentElement.scrollTop ||
       document.body.scrollTop ||
       0;
-     
+      
     if (scrollPosition > 1200) {
       header.classList.add("sticky");
      
@@ -137,6 +135,7 @@ var animateFadeInRight = document.querySelectorAll('.animateFadeInRight');
 var animateFadeInLeft = document.querySelectorAll('.animateFadeInLeft'); 
 var animaterubberBand = document.querySelectorAll('.animaterubberBand');
 var animateZoomIn = document.querySelectorAll('.animateZoomIn');
+
 function loop() {
    Array.prototype.forEach.call(animateLeftBounce, function(el1){
      if (isElementInViewport(el1)) {
@@ -241,10 +240,8 @@ loop();
     });
 
   }, true)
-
-
-
 }
+
 
 
   

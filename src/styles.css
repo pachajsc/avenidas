@@ -20,6 +20,13 @@
 .arrow-active{
     bottom:17px;
 }
+img.loading{
+    width: 56px;
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    margin-left: -30px;
+}
 /*section component*/
 .thumbnail-seccion-container button{
     width: 269px;
