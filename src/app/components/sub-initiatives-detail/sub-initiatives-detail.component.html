@@ -22,12 +22,13 @@
       <h1>{{ detail.title }}</h1>
       <p>{{ detail.description }}</p>
       <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-8">
           <div class="row">
             <div class="col-md-7" >
               <div class="thumbnail-detail-container__image-container">
                 <img src="{{ detail.src }}" />
               </div>
+              <button *ngIf="hiddenButton" (click)="link(detail.url)">{{textDetail.buttonText}}</button>
             </div>
             <div class="col-md-5">
               <ul class="thumbnail-detail-container__detaild-items">
@@ -37,15 +38,16 @@
                 <li><b>{{textDetail.state}}: </b>{{ detail.state }}</li>
                 <li><b>{{textDetail.impact}}: </b>{{ detail.impact }}</li>
                 <li><b>{{textDetail.scope}}: </b>{{ detail.scope }}</li>
+                <li><b>{{textDetail.implementationEndDate}}: </b>{{ detail.implementationEndDate }}</li>
                 <li><b>{{textDetail.country}}: </b>{{ detail.country }}</li>
                 <li><b>{{textDetail.businessUnit}}: </b>{{ detail.businessUnit }}</li>
                 <li><b>{{textDetail.flag}}: </b>{{ detail.flag }}</li>
               </ul>
-              <button *ngIf="hiddenButton" (click)="link(detail.url)">{{textDetail.buttonText}}</button>
+              
             </div>
           </div>
         </div>
-        <div class="col-md-5">
+        <div class="col-md-4">
           <h3>{{textDetail.titleFile}}</h3>
           <ul class="thumbnail-detail-container__icon-file" >
             <li *ngFor="let item of detail.files">

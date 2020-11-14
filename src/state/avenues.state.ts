@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
+import {formatDate} from '../app/utils'
 import {
   SetSubIniciatives,
   GetAvenues,
@@ -129,6 +130,7 @@ export class AvenuesStateModel {
           state: 'Estado',
           impact: 'Impacto',
           scope: 'Alcance',
+          implementationEndDate:'Fin de implementación',
           country: 'País',
           businessUnit: 'Unidad de negocio',
           flag: 'Bandera',
@@ -184,6 +186,7 @@ export class AvenuesStateModel {
           state: 'Estado',
           impact: 'Impacto',
           scope: 'Escopo',
+          implementationEndDate:'Fim da implementação',
           country: 'País',
           businessUnit: 'Unidade de negócio',
           flag: 'Bandeira',
@@ -283,6 +286,7 @@ export class AvenuesState {
                             businessUnit: sub.language.es.businessUnit,
                             flag: sub.language.es.flag,
                             files: sub.files,
+                            implementationEndDate: formatDate(sub.implementationEndDate),
                             path: sub.language.es.path,
                             url: sub.url,
                           };
@@ -321,6 +325,7 @@ export class AvenuesState {
                             businessUnit: sub.language.pt.businessUnit,
                             flag: sub.language.pt.flag,
                             files: sub.files,
+                            implementationEndDate: formatDate(sub.implementationEndDate),
                             path: sub.language.pt.path,
                             url: sub.url,
                           };

@@ -65,18 +65,18 @@
 }
 .thumbnail-seccion-container{
     padding:150px 0 200px 0;
-    margin:50px 0 10px 0;
+    margin:20px 0 10px 0;
 }
 .thumbnail-seccion-container img{
     position:absolute;
 }
 .thumbnail-seccion-container__data{
     /* padding: 87px 0 0 97px; */
-    display: flex;
+   display:flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
-    height: 370px;
+    height: 377px;
 }
 
 .thumbnail-seccion-container__action-buttons{
@@ -92,7 +92,7 @@
     line-height: 41px;
     letter-spacing: -0.0384615em;
     color: #000000;
-    width: 293px;
+    
 }
 .thumbnail-seccion-container p{
     font-style: normal;
@@ -114,8 +114,13 @@
     width: 62px;
     height: 20px;
     border: navajowhite;
+    background-color:#FF8F17 ;
     margin-top:7px;
     position: relative;
+    color:#fff;
+}
+.thumbnail-seccion-container button.ver-mas.a6{
+    background: #0089FF;
 }
 .content-ver-mas{
     position: absolute;
@@ -151,33 +156,58 @@
     content:'...'
 }
 
-.thumbnail-seccion-container .content-mask.a1 p::after{
+.thumbnail-seccion-container .content-mask.a1.es p::after{
     top: 37px;
     right: -3px;
 }
-.thumbnail-seccion-container .content-mask.a2 p::after{
+.thumbnail-seccion-container .content-mask.a2.es p::after{
     top: 36px;
     right: -7px;
 }
-.thumbnail-seccion-container .content-mask.a3 p::after{
+.thumbnail-seccion-container .content-mask.a3.es p::after{
     top: 37px;
     right:8px;
 }
-.thumbnail-seccion-container .content-mask.a4 p::after{
+.thumbnail-seccion-container .content-mask.a4.es p::after{
     top: 37px;
     right: -4px;
 }
-.thumbnail-seccion-container .content-mask.a5 p::after{
+.thumbnail-seccion-container .content-mask.a5.es p::after{
     top: 37px;
     right: 28px;
 }
-.thumbnail-seccion-container .content-mask.a6 p::after{
+.thumbnail-seccion-container .content-mask.a6.es p::after{
     top: 37px;
     right: -4px;
 }
-.thumbnail-seccion-container .content-mask.a2{
-    height:66px;
+
+.thumbnail-seccion-container .content-mask.a1.pt p::after{
+    top: 37px;
+    right: 24px;
 }
+.thumbnail-seccion-container .content-mask.a2.pt p::after{
+    top: 37px;
+    right: -3px;
+}
+.thumbnail-seccion-container .content-mask.a3.pt p::after{
+    top: 37px;
+    right:4px;
+}
+.thumbnail-seccion-container .content-mask.a4.pt p::after{
+    top: 37px;
+    right:12px;
+}
+.thumbnail-seccion-container .content-mask.a5.pt p::after{
+    top: 37px;
+    right: 4px;
+}
+.thumbnail-seccion-container .content-mask.a6.pt p::after{
+    top: 37px;
+    right:36px;
+}
+/* .thumbnail-seccion-container .content-mask.a2{
+    height:66px;
+} */
 /*section component*/
 
 

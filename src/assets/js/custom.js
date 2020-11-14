@@ -15,13 +15,17 @@ $(document).ready(function(){
     $('.sticky-nav').addClass('active-nav')
   }
   
-  $('.hero-content__lenguage a').click(function(){
+  $('.hero-content__lenguage a.pt').click(function(){
     $('a').removeClass('active')
     $(this).addClass('active')
+    $('.thumbnail-seccion-container .content-mask').removeClass('es')
+    $('.thumbnail-seccion-container .content-mask').addClass('pt')
   })  
-  $('.hero-content__lenguage a').click(function(){
+  $('.hero-content__lenguage a.es').click(function(){
     $('a').removeClass('active')
     $(this).addClass('active')
+    $('.thumbnail-seccion-container .content-mask').removeClass('pt')
+    $('.thumbnail-seccion-container .content-mask').addClass('es')
   })  
 
 
@@ -62,8 +66,12 @@ function onInit() {
   var userLang = navigator.language || navigator.userLanguage; 
    if(userLang === 'pt'){
     $('.hero-content__lenguage a.pt').addClass('active')
+    $('.thumbnail-seccion-container .content-mask').removeClass('es')
+    $('.thumbnail-seccion-container .content-mask').addClass('pt')
    }else{
     $('.hero-content__lenguage a.es').addClass('active')
+    $('.thumbnail-seccion-container .content-mask').removeClass('pt')
+    $('.thumbnail-seccion-container .content-mask').addClass('es')
    }
 
   //scroll smooth
