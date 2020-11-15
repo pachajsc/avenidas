@@ -18,7 +18,7 @@ export class NavComponent implements OnInit {
   textMock: any = {};
   language: string = '';
   displayNav: boolean = false;
-  top = '#top';
+  top = '#Avenidas';
   paths:any={}
 
   ngOnInit() {
