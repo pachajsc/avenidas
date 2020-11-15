@@ -60,7 +60,7 @@ $(document).ready(function(){
 
 
 function onInit() {
-  
+ 
   var userLang = navigator.language || navigator.userLanguage; 
    if(userLang === 'pt'){
     $('.hero-content__lenguage a.pt').addClass('active')
