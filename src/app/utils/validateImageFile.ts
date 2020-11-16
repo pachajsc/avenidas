@@ -6,5 +6,7 @@ export const validateImagenFile = (files) => {
         return file.path;
       }
     }
+  }else{
+      return null
   }
 };
