@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-import {formatDate} from '../app/utils'
+import { formatDate } from '../app/utils';
 import {
   SetSubIniciatives,
   GetAvenues,
@@ -8,7 +8,7 @@ import {
   SetLanguage,
 } from './avenues.actions';
 import { MockAvenidasService } from '../app/services/mock-avenidas.service';
-import { navHref, itemsAvenidas } from '../app/utils/';
+import { navHref, itemsAvenidas, validateImagenFile } from '../app/utils/';
 import { AvenuesService } from '../app/services';
 
 const lang = navigator.languages.filter(
@@ -22,7 +22,7 @@ export class AvenuesStateModel {
   public avenues: any;
   public language: string;
   public textsMock: any;
-  public paths:any;
+  public paths: any;
 }
 
 @State<AvenuesStateModel>({
@@ -130,7 +130,7 @@ export class AvenuesStateModel {
           state: 'Estado',
           impact: 'Impacto',
           scope: 'Alcance',
-          implementationEndDate:'Fin de implementación',
+          implementationEndDate: 'Fin de implementación',
           country: 'País',
           businessUnit: 'Unidad de negocio',
           flag: 'Bandera',
@@ -186,7 +186,7 @@ export class AvenuesStateModel {
           state: 'Estado',
           impact: 'Impacto',
           scope: 'Escopo',
-          implementationEndDate:'Fim da implementação',
+          implementationEndDate: 'Fim da implementação',
           country: 'País',
           businessUnit: 'Unidade de negócio',
           flag: 'Bandeira',
@@ -272,10 +272,13 @@ export class AvenuesState {
                   subIniciativas:
                     value.subIniciatives.length > 0
                       ? value.subIniciatives.map((sub) => {
+                          const imagen = validateImagenFile(sub.files);
                           return {
                             title: sub.language.es.name,
                             image: sub.imagen
                               ? sub.imagen
+                              : imagen
+                              ? imagen
                               : 'assets/image/empty_image.jpg',
                             description: sub.language.es.description,
                             responsable: sub.language.es.responsable,
@@ -286,7 +289,9 @@ export class AvenuesState {
                             businessUnit: sub.language.es.businessUnit,
                             flag: sub.language.es.flag,
                             files: sub.files,
-                            implementationEndDate: formatDate(sub.implementationEndDate),
+                            implementationEndDate: formatDate(
+                              sub.implementationEndDate
+                            ),
                             path: sub.language.es.path,
                             url: sub.url,
                           };
@@ -311,10 +316,13 @@ export class AvenuesState {
                   subIniciativas:
                     value.subIniciatives.length > 0
                       ? value.subIniciatives.map((sub) => {
+                          const imagen = validateImagenFile(sub.files);
                           return {
                             title: sub.language.pt.name,
                             image: sub.imagen
                               ? sub.imagen
+                              : imagen
+                              ? imagen
                               : 'assets/image/empty_image.jpg',
                             description: sub.language.pt.description,
                             responsable: sub.language.pt.responsable,
@@ -325,7 +333,9 @@ export class AvenuesState {
                             businessUnit: sub.language.pt.businessUnit,
                             flag: sub.language.pt.flag,
                             files: sub.files,
-                            implementationEndDate: formatDate(sub.implementationEndDate),
+                            implementationEndDate: formatDate(
+                              sub.implementationEndDate
+                            ),
                             path: sub.language.pt.path,
                             url: sub.url,
                           };
