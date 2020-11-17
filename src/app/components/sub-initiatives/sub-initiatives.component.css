@@ -30,7 +30,7 @@
     border-top-left-radius: 12px;
 }
 .thumbnail-container__card-image img{
-    width: 85%;
+    /* width: 85%; */
     transform: translate(-50%, -48%);
     position: absolute;
     top: 50%;

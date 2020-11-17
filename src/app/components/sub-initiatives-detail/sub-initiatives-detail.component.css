@@ -36,13 +36,14 @@
 .thumbnail-detail-container__image-container{
     overflow:hidden;
     border-radius: 12px;
-    height:257px;
+    height:220px;
     position: relative;
     box-shadow: 0 0 42px 5px #0000001a;
     margin-bottom:25px;
+    background-color: #FFFFFF;
 }
 .thumbnail-detail-container__image-container img{
-    width: 100%;
+    /* width: 100%; */
     position: relative;
     transform: translate(-50%, -49%);
     top: 50%;
