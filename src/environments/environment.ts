@@ -5,7 +5,7 @@ import { apiPath } from './configApiPath';
 
 export const environment = {
   production: false,
-  avenueURL: `${apiPath}/avenues/lists`,
+  avenueURL: `${apiPath}`,
 };
 
 /*
