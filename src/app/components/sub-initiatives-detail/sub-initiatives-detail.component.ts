@@ -10,6 +10,7 @@ import {
   SetLanguage,
 } from '../../../state/avenues.actions';
 import { Observable } from 'rxjs';
+import { apiPath } from '../../../environments/configApiPath';
 
 @Component({
   selector: 'app-sub-initiatives-detail',
@@ -38,6 +39,7 @@ export class SubInitiativesDetailComponent implements OnInit {
   textMock: any = {};
   textDetail: any = {};
   hiddenButton: boolean = false;
+  apiPath: string = apiPath;
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((res: any) => {

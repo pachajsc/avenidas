@@ -26,7 +26,7 @@
           <div class="row">
             <div class="col-md-7" >
               <div class="thumbnail-detail-container__image-container">
-                <img src="http://40.124.121.241:8001{{ detail.src }}" />
+                <img src="{{ detail.src }}" />
               </div>
               <button *ngIf="hiddenButton" (click)="link(detail.url)">{{textDetail.buttonText}}</button>
             </div>
@@ -52,7 +52,7 @@
           <ul class="thumbnail-detail-container__icon-file" >
             <li *ngFor="let item of detail.files">
               
-              <a href="http://40.124.121.241:8001{{ item.path }}" download><img src="assets/image/icon-file.svg" /><span>{{ item.name }}</span></a>
+              <a href="{{apiPath}}{{ item.path }}" download><img src="assets/image/icon-file.svg" /><span>{{ item.name }}</span></a>
             </li>
           </ul>
          

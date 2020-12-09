@@ -7,9 +7,9 @@ import {
   SetIniciatives,
   SetLanguage,
 } from './avenues.actions';
-import { MockAvenidasService } from '../app/services/mock-avenidas.service';
+
 import { navHref, itemsAvenidas, validateImagenFile } from '../app/utils/';
-import { AvenuesService } from '../app/services';
+import { AvenuesService, MockAvenidasService } from '../app/services';
 
 const lang = navigator.languages.filter(
   (lang) => lang === 'es' || lang === 'pt'
@@ -246,7 +246,7 @@ export class AvenuesState {
   @Action(GetAvenues)
   getAvenues({ getState, setState }: StateContext<AvenuesStateModel>) {
     try {
-      this.service.getAvenidas().subscribe(
+      this.mockAvenidas.getAvenidas().subscribe(
         (res) => {
           let avenuesEs = [];
           let avenuesPt = [];

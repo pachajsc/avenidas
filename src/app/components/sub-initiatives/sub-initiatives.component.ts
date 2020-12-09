@@ -11,6 +11,7 @@ import {
   SetLanguage,
 } from '../../../state/avenues.actions';
 import { Observable } from 'rxjs';
+import {apiPath} from '../../../environments/configApiPath'
 
 @Component({
   selector: 'app-sub-initiatives',
@@ -36,6 +37,7 @@ export class SubInitiativesComponent implements OnInit {
   params: any = {};
   language: string = '';
   textMock: any = {};
+  apiPath: string = apiPath;
 
   @Select(AvenuesState.selectedIniciatives) subIniciatives$: Observable<any[]>;
   @Select(AvenuesState.getItemsAvenues) itemsAvenidas$: Observable<any>;
@@ -117,7 +119,7 @@ export class SubInitiativesComponent implements OnInit {
       }
       if (language) {
         this.store.dispatch(new SetLanguage(language));
-        this.helper.changeLenguage(true)
+        this.helper.changeLenguage(true);
         this.itemsAvenidas$.subscribe(
           (avenues) => {
             Object.values(avenues[language]).map((value: any) => {

@@ -1,11 +1,11 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { apiPath } from './configApiPath';
 
 export const environment = {
   production: false,
-  avenueURL:
-    'http://40.124.121.241:8001/avenues/lists',
+  avenueURL: `${apiPath}/avenues/lists`,
 };
 
 /*
