@@ -133,7 +133,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         extension: 'jpg',
                       },
                     ],
-                    imagen: 'https://img2.freepng.es/20180426/wpw/kisspng-angularjs-javascript-directive-5ae17348350107.6691653815247245522171.jpg',
+                    imagen: 'assets/image/empty_image.jpg',
                     iniciativeId: '5f8dcae14387ab3ff4ad862a',
                     url: 'http://www.facebook.com',
                     implementationEndDate: '2020-10-21',
@@ -186,7 +186,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         extension: 'jpg',
                       },
                     ],
-                    imagen: 'https://img2.freepng.es/20180426/wpw/kisspng-angularjs-javascript-directive-5ae17348350107.6691653815247245522171.jpg',
+                    imagen: 'assets/image/empty_image.jpg',
                     iniciativeId: '5f8dcae14387ab3ff4ad862a',
                     url: 'http://www.facebook.com',
                     implementationEndDate: '2020-10-21',
@@ -239,7 +239,7 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
                         extension: 'jpg',
                       },
                     ],
-                    imagen: 'https://img2.freepng.es/20180426/wpw/kisspng-angularjs-javascript-directive-5ae17348350107.6691653815247245522171.jpg',
+                    imagen: 'assets/image/empty_image.jpg',
                     iniciativeId: '5f8dcae14387ab3ff4ad862a',
                     url: 'http://www.facebook.com',
                     implementationEndDate: '2020-10-21',
@@ -764,7 +764,6 @@ export class InMemoryDataAvenidasService extends InMemoryDbService {
         ],
       },
     };
-
 
     return { avenidas };
   }

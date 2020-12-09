@@ -246,7 +246,7 @@ export class AvenuesState {
   @Action(GetAvenues)
   getAvenues({ getState, setState }: StateContext<AvenuesStateModel>) {
     try {
-      this.mockAvenidas.getAvenidas().subscribe(
+      this.service.getAvenidas().subscribe(
         (res) => {
           let avenuesEs = [];
           let avenuesPt = [];
