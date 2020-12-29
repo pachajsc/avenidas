@@ -38,7 +38,7 @@ export class SubInitiativesDetailComponent implements OnInit {
   language: string = '';
   textMock: any = {};
   textDetail: any = {};
-  hiddenButton: boolean = false;
+  //hiddenButton: boolean = false;
   apiPath: string = apiPath;
 
   ngOnInit(): void {
@@ -81,7 +81,7 @@ export class SubInitiativesDetailComponent implements OnInit {
           }
         }
 
-        this.hiddenButton = !this.detail.url ? false : true;
+        //this.hiddenButton = !this.detail.url ? false : true;
         this.detail = { ...res.detail, files };
         this.avenuePath = `${res.avenuePath}`;
         this.volverPath = [`/${res.path}`];
@@ -144,7 +144,7 @@ export class SubInitiativesDetailComponent implements OnInit {
                   }
                   let subIniciativeDetail = {
                     detail,
-                    avenuePath: `Avenidas Estratégicas / ${res.avenida.title} / ${res.iniciative.title} `,
+                    avenuePath: `${res.avenida.title} / ${res.iniciative.title} `,
                     path: res.path,
                   };
                   this.store.dispatch(

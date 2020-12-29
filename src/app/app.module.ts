@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { NgxsModule } from '@ngxs/store';
 import { HttpClientModule } from '@angular/common/http';
 //service mock dev
-//import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-//import { InMemoryDataAvenidasService } from '../app/services/in-memory-data-avenidas.service';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { InMemoryDataAvenidasService } from '../app/services/in-memory-data-avenidas.service';
 //service mock dev
 import { environment } from '../environments/environment';
 
@@ -43,7 +43,7 @@ import { HelperService, AvenuesService } from './services/index';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    //HttpClientInMemoryWebApiModule.forRoot(InMemoryDataAvenidasService), // inyeccion dependecia de mock
+    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataAvenidasService), // inyeccion dependecia de mock
     NgxsModule.forRoot([AvenuesState], {
       developmentMode: !environment.production,
     }),

@@ -29,7 +29,7 @@
               <h2>{{ textMock.newITModel.title }}</h2>
             </a>
           </div>
-          <ul *ngFor="let subItem of itemsAvenidas.item6.iniciativas">
+          <ul *ngFor="let subItem of itemsAvenidas.item5.iniciativas">
             <li>{{ subItem.title }}</li>
           </ul>
         </div>
@@ -44,7 +44,7 @@
               <h2>{{ textMock.cybersecurity.title }}</h2>
             </a>
           </div>
-          <ul *ngFor="let subItem of itemsAvenidas.item2.iniciativas">
+          <ul *ngFor="let subItem of itemsAvenidas.item1.iniciativas">
             <li>{{ subItem.title }}</li>
           </ul>
         </div>
@@ -59,7 +59,7 @@
               <h2>{{ textMock.technologyStrategy.title }}</h2>
             </a>
           </div>
-          <ul *ngFor="let subItem of itemsAvenidas.item4.iniciativas">
+          <ul *ngFor="let subItem of itemsAvenidas.item3.iniciativas">
             <li>{{ subItem.title }}</li>
           </ul>
         </div>
@@ -74,7 +74,8 @@
               <h2>{{ textMock.talentManagement.title }}</h2>
             </a>
           </div>
-          <ul *ngFor="let subItem of itemsAvenidas.item5.iniciativas">
+
+          <ul *ngFor="let subItem of itemsAvenidas.item6.iniciativas">
             <li>{{ subItem.title }}</li>
           </ul>
         </div>
@@ -89,7 +90,8 @@
               <h2>{{ textMock.digitalStrategy.title }}</h2>
             </a>
           </div>
-          <ul *ngFor="let subItem of itemsAvenidas.item3.iniciativas">
+
+          <ul *ngFor="let subItem of itemsAvenidas.item4.iniciativas">
             <li>{{ subItem.title }}</li>
           </ul>
         </div>
@@ -104,7 +106,7 @@
               <h2>{{ textMock.centricityConsumer.title }}</h2>
             </a>
           </div>
-          <ul *ngFor="let subItem of itemsAvenidas.item1.iniciativas">
+          <ul *ngFor="let subItem of itemsAvenidas.item2.iniciativas">
             <li>{{ subItem.title }}</li>
           </ul>
         </div>
@@ -121,7 +123,7 @@
     id="Nuevo-Modelo-TI"
   >
     <app-new-itmodel
-      [avenida]="itemsAvenidas.item6"
+      [avenida]="itemsAvenidas.item5"
       [textMock]="textMock.newITModel"
     ></app-new-itmodel>
   </section>
@@ -131,7 +133,7 @@
   <div id="Ciberseguranca-e-conformidade"></div>
   <section class="thumbnail-seccion-container" id="Cyberseguridad-y-Compliance">
     <app-cybersecurity-compliance
-      [avenida]="itemsAvenidas.item2"
+      [avenida]="itemsAvenidas.item1"
       [textMock]="textMock.cybersecurity"
     ></app-cybersecurity-compliance>
   </section>
@@ -144,7 +146,7 @@
     id="Estrategia-Tecnologica"
   >
     <app-technological-strategy
-      [avenida]="itemsAvenidas.item4"
+      [avenida]="itemsAvenidas.item3"
       [textMock]="textMock.technologyStrategy"
     ></app-technological-strategy>
   </section>
@@ -157,7 +159,7 @@
     id="Gestion-de-Talento"
   >
     <app-talent-management
-      [avenida]="itemsAvenidas.item5"
+      [avenida]="itemsAvenidas.item6"
       [textMock]="textMock.talentManagement"
     ></app-talent-management>
   </section>
@@ -169,7 +171,7 @@
     id="Estrategia-Digital"
   >
     <app-digital-strategy
-      [avenida]="itemsAvenidas.item3"
+      [avenida]="itemsAvenidas.item4"
       [textMock]="textMock.digitalStrategy"
     ></app-digital-strategy>
   </section>
@@ -180,7 +182,7 @@
   <div id="Centricidade-do-cliente"></div>
   <section class="thumbnail-seccion-container" id="Customer-Centricity">
     <app-customer-centricity
-      [avenida]="itemsAvenidas.item1"
+      [avenida]="itemsAvenidas.item2"
       [textMock]="textMock.centricityConsumer"
     ></app-customer-centricity>
   </section>
