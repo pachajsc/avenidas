@@ -30,7 +30,7 @@
               <div class="thumbnail-detail-container__image-container">
                 <img src="{{ detail.src }}" />
               </div>
-              <button (click)="link(detail.url)">
+              <button *ngIf="detail.url" (click)="link(detail.url)">
                 {{ textDetail.buttonText }}
               </button>
             </div>
